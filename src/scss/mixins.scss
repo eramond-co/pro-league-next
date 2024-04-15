@@ -1,0 +1,32 @@
+@mixin maxWidth($width) {
+  width: 100%;
+  max-width: $width;
+}
+
+@mixin minWidth($width) {
+  min-width: $width;
+  width: $width;
+}
+
+@mixin flexCenter($direction: row) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+@mixin screenHeight {
+  height: calc(100dvh - 5px);
+}
+
+@function pixelToVw($pixel) {
+  $vw: calc(($pixel/1440) * 100) + vw;
+
+  @return $vw;
+}
+
+@function pixelToVwMobile($pixel) {
+  $vw: calc(($pixel/375) * 100) + vw;
+
+  @return $vw;
+}

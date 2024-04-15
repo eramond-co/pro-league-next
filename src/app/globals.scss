@@ -1,0 +1,33 @@
+@import "@/scss/index.scss";
+
+//jost
+@font-face {
+  font-family: "jost";
+  src: url("./../assets/fonts/jost/Jost-Variable.ttf");
+  font-style: normal;
+}
+
+*, pre, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: jost;
+}
+
+body {
+  min-height: 100dvh;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
+  color: $gray-25;
+  font-family: "jost";
+  background-color: $background;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
