@@ -1,0 +1,313 @@
+@import "@/scss/index.scss";
+
+//inputDefault
+
+.inputDefaultWrapper {
+  width: 100%;
+  @include flexCenter();
+
+  .inputDefault {
+    width: 100%;
+    @include flexCenter(column);
+    align-items: flex-start;
+    gap: 4px;
+
+    label {
+      width: 100%;
+      @include flexCenter(column);
+      align-items: flex-start;
+
+      span {
+        @include body-16-regular;
+        color: $gray-25;
+      }
+
+      input {
+        width: 100%;
+        outline: none;
+        border: 3px solid transparent;
+        height: 40px;
+        padding: 4px 16px;
+        font-family: inherit;
+        @include body-16-regular;
+        background-color: $gray-25;
+        border-radius: 8px;
+        color: $gray-900;
+
+        &::placeholder {
+          color: $gray-200;
+        }
+
+        &:focus {
+          border-color: $gray-300;
+
+          &::placeholder {
+            color: $gray-100;
+          }
+        }
+      }
+    }
+
+    span.error {
+      @include footnote-12-regular;
+      color: $error;
+      padding-left: 16px;
+    }
+  }
+
+  &.error {
+    .inputDefault {
+      input {
+        border-color: $error;
+      }
+    }
+  }
+}
+
+//inputPhoneNumber
+
+.inputNumberWrapper {
+  width: 100%;
+  @include flexCenter(column);
+  align-items: flex-start;
+  gap: 4px;
+
+  .inputNumber {
+    width: 100%;
+    @include flexCenter();
+    justify-content: flex-start;
+    gap: 4px;
+    border: 3px solid transparent;
+    background-color: $gray-25;
+    border-radius: 8px;
+    height: 40px;
+    position: relative;
+    padding: 0 16px;
+
+    .listCountries {
+      @include flexCenter(column);
+
+      .choosedCountry {
+        @include flexCenter();
+        gap: 8px;
+        color: $gray-900;
+        cursor: pointer;
+
+        &::after {
+          content: "";
+          width: 1px;
+          height: 24px;
+          background-color: $gray-100;
+        }
+
+        .flag {
+          @include minWidth(24px);
+          height: 16px;
+          @include flexCenter();
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .code {
+          @include body-16-regular;
+        }
+
+        .icon {
+          @include minWidth(24px);
+          height: 24px;
+          @include flexCenter();
+
+          svg {
+            width: 100%;
+            height: 24px;
+            object-fit: contain;
+          }
+        }
+      }
+      .list {
+        position: absolute;
+        top: 90%;
+        left: 0;
+        background-color: $gray-25;
+        width: 100%;
+        border-radius: 8px;
+        color: $gray-900;
+        opacity: 0;
+        transition: 0.3s;
+        z-index: 2;
+        overflow: hidden;
+        visibility: hidden;
+
+        .header {
+          width: 100%;
+          padding: 8px 16px;
+          border-bottom: 1px solid $gray-50;
+
+          .searchBox {
+            width: 100%;
+            position: relative;
+            @include flexCenter();
+            justify-content: flex-start;
+            gap: 8px;
+
+            .icon {
+              @include minWidth(24px);
+              height: 24px;
+              @include flexCenter();
+
+              svg {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
+
+            input {
+              height: 28px;
+              font-family: inherit;
+              @include body-16-regular;
+              border: none;
+              background-color: transparent;
+              outline: none;
+
+              &::placeholder {
+                color: $gray-200;
+              }
+
+              &:focus {
+                &::placeholder {
+                  color: $gray-100;
+                }
+              }
+            }
+          }
+        }
+
+        .body {
+          width: 100%;
+          @include flexCenter(column);
+          align-items: flex-start;
+          max-height: 160px;
+          overflow-y: auto;
+          justify-content: flex-start;
+
+          &::-webkit-scrollbar {
+            width: 6px;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: $gray-100;
+            border-radius: 10px;
+          }
+
+          li {
+            width: 100%;
+            @include flexCenter();
+            justify-content: flex-start;
+            padding: 6px 16px;
+            cursor: pointer;
+            gap: 8px;
+            border-radius: 20px;
+            transition: 0.3s;
+
+            &:hover {
+              background-color: $gray-50;
+            }
+
+            .flag {
+              @include minWidth(24px);
+              height: 16px;
+              @include flexCenter();
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
+
+            .text {
+              @include body-14-regular;
+            }
+
+            &.selected::after {
+              content: "";
+              margin-left: auto;
+              width: 24px;
+              height: 24px;
+              background: url("./../../../assets/pics/icons/check.svg") round;
+              background-size: cover;
+            }
+          }
+
+          .emptyList {
+            padding: 6px 16px;
+            @include body-14-regular;
+            color: $gray-200;
+          }
+        }
+
+        &.active {
+          visibility: visible;
+          top: 120%;
+          opacity: 1;
+        }
+      }
+    }
+
+    label {
+      width: 100%;
+      @include flexCenter(column);
+      align-items: flex-start;
+
+      span {
+        @include body-16-regular;
+        color: $gray-25;
+      }
+
+      input {
+        width: 100%;
+        outline: none;
+        border: none;
+        padding: 4px 0 4px 8px;
+        font-family: inherit;
+        @include body-16-regular;
+        background-color: transparent;
+        border-radius: 8px;
+        color: $gray-900;
+
+        &::placeholder {
+          color: $gray-200;
+        }
+
+        &:focus {
+          border-color: $gray-300;
+
+          &::placeholder {
+            color: $gray-100;
+          }
+        }
+      }
+    }
+  }
+  span.error {
+    @include footnote-12-regular;
+    color: $error;
+    padding-left: 16px;
+  }
+
+  &.error {
+    .inputNumber {
+      border-color: $error;
+    }
+  }
+
+  &.focus {
+    .inputNumber {
+      border-color: $gray-300;
+    }
+  }
+}
