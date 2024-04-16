@@ -7,11 +7,10 @@
   font-style: normal;
 }
 
-*, pre, button {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: jost;
 }
 
 body {
@@ -21,7 +20,7 @@ body {
   z-index: 1;
   color: $gray-25;
   font-family: "jost";
-  background-color: $background;
+  background-color: $gray-900;
 }
 
 a {
