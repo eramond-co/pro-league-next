@@ -6,6 +6,7 @@ import {
   InputDefaultUikit,
   InputNumberUikit,
 } from "@/components/uikits/inputs/inputs";
+import { ButtonSeconddary } from "@/components/button-secondary/buttonSeconddary";
 
 const UikitsPage: React.FC = () => {
   const initalValue = {
@@ -38,7 +39,10 @@ const UikitsPage: React.FC = () => {
               setFieldValue("phone_number", v);
             }}
           />
-          <button type="submit">send</button>
+
+          <ButtonSeconddary type="submit" isLink={false}>
+            <p>Send</p>
+          </ButtonSeconddary>
         </form>
         {/* <InputNumberUikit
           placeHolder="Phone Number"
