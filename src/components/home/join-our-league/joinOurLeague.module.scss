@@ -21,5 +21,9 @@
     margin-bottom: 48px;
     @include body-20-regular;
     text-align: center;
+
+    @include tablet {
+      @include body-18-regular;
+    }
   }
 }
