@@ -36,35 +36,42 @@
 }
 
 //body
-@mixin body-20-semobold{
+@mixin body-20-semibold {
   font-family: "jost";
   font-weight: 600;
   font-size: 20px;
   line-height: 28.9px;
 }
 
-@mixin body-16-medium{
+@mixin body-16-medium {
   font-family: "jost";
   font-weight: 500;
   font-size: 16px;
   line-height: 28px;
 }
 
-@mixin body-20-regular{
+@mixin body-20-regular {
   font-family: "jost";
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
 }
 
-@mixin body-16-regular{
+@mixin body-16-regular {
   font-family: "jost";
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
 }
 
-@mixin body-14-regular{
+@mixin body-16-bold {
+  font-family: "jost";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+@mixin body-14-regular {
   font-family: "jost";
   font-weight: 400;
   font-size: 14px;

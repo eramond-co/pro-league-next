@@ -1,0 +1,24 @@
+@import "@/scss/index";
+
+.proLeagueInfo {
+  .title {
+    @include title-32-semibold;
+    color: $gray-25;
+    text-align: center;
+
+    @include tablet {
+      @include title-24-semibold;
+    }
+  }
+
+  .explain {
+    margin-top: 16px;
+    @include body-20-regular;
+    color: $gray-25;
+    text-align: center;
+
+    @include tablet {
+      @include body-16-regular;
+    }
+  }
+}
