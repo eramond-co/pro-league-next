@@ -8,21 +8,23 @@ interface PropsDataType {
   isLink?: boolean;
   type?: "submit" | "button" | "reset" | undefined;
   link?: string;
+  className?: string;
 }
 
 export const ButtonSeconddary: React.FC<PropsDataType> = ({
   children,
   buttonProps,
   isLink = false,
+  className,
   type,
   link,
 }) => {
   return isLink ? (
-    <Link href={link ? link : ""} className={classes.button}>
+    <Link href={link ? link : ""} className={`${classes.button} ${className}`}>
       {children}
     </Link>
   ) : (
-    <button {...buttonProps} type={type} className={classes.button}>
+    <button {...buttonProps} type={type} className={`${classes.button} ${className}`}>
       {children}
     </button>
   );
