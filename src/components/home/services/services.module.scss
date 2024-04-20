@@ -1,0 +1,59 @@
+@import "@/scss/index";
+
+.services {
+  width: 100%;
+
+  .title {
+    @include title-32-semibold;
+    color: $gray-25;
+    text-align: center;
+  }
+
+  .container {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(343px, 1fr));
+    gap: 24px;
+
+    @include tablet {
+    }
+
+    .item {
+      padding: 24px;
+      min-width: 343px;
+
+      .icon {
+        margin: 0 auto;
+        padding: 16px;
+        width: max-content;
+        border-radius: 50%;
+
+        &.kit {
+          background-color: $secondary-pink;
+        }
+
+        &.liveScore {
+          background-color: $primary-600;
+        }
+
+        &.liveStream {
+          background-color: $secondary-blue;
+        }
+      }
+
+      .title {
+        margin-top: 24px;
+        @include title-24-semibold;
+        color: $gray-25;
+        text-align: center;
+      }
+
+      .explain {
+        margin-top: 16px;
+        @include body-16-regular;
+        color: $gray-25;
+        text-align: center;
+      }
+    }
+  }
+}

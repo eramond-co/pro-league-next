@@ -3,6 +3,7 @@ import { Header } from "@/components/home/header/header";
 import { Footer } from "@/components/footer/footer";
 import ProLeagueInfo from "./pro-league-info/proLeagueInfo";
 import Pricings from "./pricings/pricings";
+import HomeServices from "./services/services";
 
 export const HomeComponent: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ export const HomeComponent: React.FC = () => {
         <div className={classes.main}>
           <ProLeagueInfo />
           <Pricings />
+          <HomeServices />
         </div>
       </main>
       <Footer />
