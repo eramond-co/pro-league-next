@@ -6,6 +6,7 @@ import Pricings from "./pricings/pricings";
 import HomeServices from "./services/services";
 import { Partners } from "./partners/partners";
 import { JoinOurLeague } from "./join-our-league/joinOurLeague";
+import BannerSection from "./banner/banner";
 
 export const HomeComponent: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ export const HomeComponent: React.FC = () => {
           <ProLeagueInfo />
           <Pricings />
           <HomeServices />
+          <BannerSection />
           <Partners />
           <JoinOurLeague />
         </div>
