@@ -6,16 +6,28 @@
   justify-content: flex-start;
   gap: 120px;
 
+  @include tablet {
+    gap: 80px;
+  }
+
   .mainWrapper {
     width: 100%;
     padding: 0 120px;
     @include flexCenter();
+
+    @include tablet {
+      padding: 0 16px;
+    }
 
     .main {
       @include maxWidth(1200px);
       @include flexCenter(column);
       justify-content: flex-start;
       gap: 120px;
+
+      @include tablet {
+        gap: 80px;
+      }
     }
   }
 }
