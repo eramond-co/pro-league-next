@@ -1,0 +1,21 @@
+@import "@/scss/index.scss";
+
+.home {
+  width: 100%;
+  @include flexCenter(column);
+  justify-content: flex-start;
+  gap: 120px;
+
+  .mainWrapper {
+    width: 100%;
+    padding: 0 120px;
+    @include flexCenter();
+
+    .main {
+      @include maxWidth(1200px);
+      @include flexCenter(column);
+      justify-content: flex-start;
+      gap: 120px;
+    }
+  }
+}
