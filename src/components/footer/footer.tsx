@@ -68,8 +68,7 @@ export const Footer: React.FC = () => {
         </div>
         <div className={classes.footerBottom}>
           <div className={classes.text}>
-            <CopyRightIcon />
-            <span>2024 Pro League, all rights reserved.</span>
+            <span>&#169;</span> 2024 Pro League, all rights reserved.
           </div>
         </div>
       </div>
