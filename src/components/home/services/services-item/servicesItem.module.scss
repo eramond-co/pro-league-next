@@ -1,0 +1,42 @@
+@import "@/scss/index.scss";
+
+.servicesItem {
+  padding: 24px;
+  @include maxWidth(343px);
+
+  .icon {
+    margin: 0 auto;
+    padding: 16px;
+    width: max-content;
+    border-radius: 50%;
+    @include minWidth(64px);
+    height: 64px;
+    @include flexCenter();
+
+    &.kit {
+      background-color: $secondary-pink;
+    }
+
+    &.liveScore {
+      background-color: $primary-600;
+    }
+
+    &.liveStream {
+      background-color: $secondary-blue;
+    }
+  }
+
+  .title {
+    margin-top: 24px;
+    @include title-24-semibold;
+    color: $gray-25;
+    text-align: center;
+  }
+
+  .explain {
+    margin-top: 16px;
+    @include body-16-regular;
+    color: $gray-25;
+    text-align: center;
+  }
+}

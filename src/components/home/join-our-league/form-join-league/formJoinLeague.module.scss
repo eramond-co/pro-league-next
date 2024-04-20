@@ -1,0 +1,7 @@
+@import "@/scss/index.scss";
+
+.form {
+  @include maxWidth(377px);
+  @include flexCenter(column);
+  gap: 16px;
+}

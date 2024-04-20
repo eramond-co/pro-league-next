@@ -18,42 +18,16 @@
     @include tablet {
     }
 
-    .item {
-      padding: 24px;
-      min-width: 343px;
+    .kit {
+      background-color: $secondary-pink;
+    }
 
-      .icon {
-        margin: 0 auto;
-        padding: 16px;
-        width: max-content;
-        border-radius: 50%;
+    .liveScore {
+      background-color: $primary-600;
+    }
 
-        &.kit {
-          background-color: $secondary-pink;
-        }
-
-        &.liveScore {
-          background-color: $primary-600;
-        }
-
-        &.liveStream {
-          background-color: $secondary-blue;
-        }
-      }
-
-      .title {
-        margin-top: 24px;
-        @include title-24-semibold;
-        color: $gray-25;
-        text-align: center;
-      }
-
-      .explain {
-        margin-top: 16px;
-        @include body-16-regular;
-        color: $gray-25;
-        text-align: center;
-      }
+    .liveStream {
+      background-color: $secondary-blue;
     }
   }
 }

@@ -12,6 +12,7 @@
   cursor: pointer;
   border-radius: 8px;
   transition: 0.3s;
+  @include flexCenter();
 
   &:hover {
     opacity: 0.8;
