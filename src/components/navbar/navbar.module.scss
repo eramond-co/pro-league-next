@@ -1,0 +1,41 @@
+@import "@/scss/index.scss";
+
+.navbarWrapper {
+  width: 100%;
+  padding: 23px 120px;
+  @include flexCenter();
+  position: relative;
+  z-index: 10;
+
+  @include tablet {
+    padding: 24px 16px;
+  }
+
+  .navbar {
+    @include maxWidth(1200px);
+    @include flexCenter();
+    justify-content: flex-start;
+
+    .logoWrapper {
+      @include flexCenter();
+      gap: 16px;
+      color: $gray-25;
+      @include body-20-semibold;
+      @include maxWidth(138px);
+
+      .logo {
+        @include minWidth(56px);
+        height: 56px;
+        @include flexCenter();
+        border-radius: 50%;
+        background-color: $gray-25;
+      }
+    }
+  }
+
+  &.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
