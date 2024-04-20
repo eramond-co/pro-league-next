@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer/footer";
 import ProLeagueInfo from "./pro-league-info/proLeagueInfo";
 import Pricings from "./pricings/pricings";
 import HomeServices from "./services/services";
+import { Partners } from "./partners/partners";
 
 export const HomeComponent: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ export const HomeComponent: React.FC = () => {
           <ProLeagueInfo />
           <Pricings />
           <HomeServices />
+          <Partners />
         </div>
       </main>
       <Footer />

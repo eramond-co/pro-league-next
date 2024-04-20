@@ -1,0 +1,25 @@
+@import "@/scss/index.scss";
+
+.partners {
+  width: 100%;
+  @include flexCenter(column);
+  gap: 48px;
+
+  .title {
+    h3 {
+      @include title-32-semibold;
+
+      @include tablet {
+        @include title-24-semibold;
+      }
+    }
+  }
+
+  .items {
+    @include maxWidth(584px);
+    @include flexCenter();
+    flex-wrap: wrap;
+    column-gap: 80px;
+    row-gap: 40px;
+  }
+}

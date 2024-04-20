@@ -1,0 +1,34 @@
+@import "@/scss/index.scss";
+
+.partnersItem {
+  @include flexCenter();
+  gap: 16px;
+
+  .logo {
+    @include minWidth(56px);
+    height: 56px;
+    @include flexCenter();
+    border-radius: 50%;
+
+    @include tablet {
+      @include minWidth(48px);
+      height: 48px;
+      @include body-20-semibold;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &.transparent {
+      background-color: $gray-300;
+    }
+  }
+
+  .name {
+    @include title-24-semibold;
+    color: $gray-300;
+  }
+}
