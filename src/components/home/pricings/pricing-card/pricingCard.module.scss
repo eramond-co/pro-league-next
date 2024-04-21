@@ -2,14 +2,9 @@
 
 .pricingCard {
   height: 512px;
-  width: 378px;
   border-radius: 8px;
   position: relative;
   overflow: hidden;
-
-  @include tablet {
-    width: 343px;
-  }
 
   &::after {
     content: "";
