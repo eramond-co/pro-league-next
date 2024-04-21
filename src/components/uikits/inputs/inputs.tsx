@@ -134,6 +134,7 @@ export const InputNumberUikit: React.FC<PhoneNumber> = ({
   };
 
   const [value, setValue] = useState<string>();
+  
   const defaultOnChangeHandler = (value: string) => {
     const cleaned = value.replace(/\D/g, "").replace(/^0/gm, "");
     const match = [
@@ -170,10 +171,14 @@ export const InputNumberUikit: React.FC<PhoneNumber> = ({
       `}
     >
       <div className={classes.inputNumber}>
-        <div className={classes.listCountries}>
+        <div
+          className={`${classes.listCountries} ${
+            toggleCountrylist ? classes.active : ""
+          }`}
+        >
           <div
             className={classes.choosedCountry}
-            onClick={(e) => {
+            onClick={() => {
               setToggleCountryList((state) => !state);
             }}
           >
@@ -190,11 +195,7 @@ export const InputNumberUikit: React.FC<PhoneNumber> = ({
             </div>
           </div>
 
-          <div
-            className={`${classes.list} ${
-              toggleCountrylist ? classes.active : ""
-            }`}
-          >
+          <div className={`${classes.list}`}>
             <div className={classes.header}>
               <div className={classes.searchBox}>
                 <div className={classes.icon}>

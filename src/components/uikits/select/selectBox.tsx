@@ -1,4 +1,4 @@
-import { SelectHTMLAttributes, useState } from "react";
+import { SelectHTMLAttributes, useEffect, useState } from "react";
 import classes from "./selectBox.module.scss";
 import { ArrowDownIcon } from "@/svgs/bradSvgs";
 
@@ -11,25 +11,37 @@ interface PropsDataType {
   placeHolder?: string;
   label?: string;
   list?: ListSelectBoxType[];
+  onChange?: (value: any) => any;
+  messageError?: string;
 }
 
 export const SelectUikit: React.FC<PropsDataType> = ({
   label,
   placeHolder,
   list,
+  onChange,
+  messageError,
 }) => {
   const [choosedItem, setChoosedItem] = useState<string | null>(null);
   const [openList, setOpenList] = useState<boolean>(false);
 
+  useEffect(() => {
+    if (onChange) onChange(choosedItem);
+  }, [choosedItem]);
+
   return (
-    <div className={classes.selectUiki}>
+    <div
+      className={`${classes.selectUiki} ${openList ? classes.active : ""} ${
+        messageError ? classes.error : ""
+      }`}
+    >
       <div className={classes.label}>
         <p>{label}</p>
       </div>
       <div
         className={`${classes.choosedItem} ${
           !choosedItem ? classes.default : ""
-        } ${openList ? classes.active : ""}`}
+        }`}
         onClick={() => {
           setOpenList((state) => !state);
         }}
@@ -39,19 +51,32 @@ export const SelectUikit: React.FC<PropsDataType> = ({
           <ArrowDownIcon />
         </div>
       </div>
-      <div className={`${classes.list} ${openList ? classes.active : ""}`}>
+      <div className={`${classes.list}`}>
         <ul>
           {list ? (
             list?.map((item: ListSelectBoxType) => (
-              <li key={item.id} onClick={() => setChoosedItem(item.title)}>
+              <li
+                key={item.id}
+                onClick={() => {
+                  setChoosedItem(item.title);
+                  setOpenList((state) => !state);
+                }}
+                className={
+                  item.title.toLowerCase() === choosedItem?.toLowerCase()
+                    ? classes.selected
+                    : ""
+                }
+              >
                 <p>{item.title}</p>
               </li>
             ))
           ) : (
-            <p>List is Empty</p>
+            <p className={classes.empty}>List is Empty</p>
           )}
         </ul>
       </div>
+
+      {messageError && <span className={classes.error}>{messageError}</span>}
     </div>
   );
 };

@@ -4,8 +4,9 @@
   width: 100%;
   @include flexCenter(column);
   align-items: flex-start;
-  gap: 8px;
+  gap: 4px;
   position: relative;
+  z-index: 1;
 
   .label {
     padding-left: 14px;
@@ -23,13 +24,11 @@
     @include body-16-regular;
     background-color: $gray-25;
     border: 3px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
 
     &.default {
       color: $gray-200;
-    }
-
-    &.active {
-      border-color: $gray-300;
     }
 
     .icon {
@@ -54,11 +53,71 @@
     background-color: $gray-25;
     border-radius: 8px;
     transition: 0.3s;
+    z-index: 2;
 
-    &.active {
+    ul {
+      width: 100%;
+      @include flexCenter(column);
+      align-items: flex-start;
+
+      li {
+        cursor: pointer;
+        width: 100%;
+        @include body-14-regular;
+        color: $gray-900;
+        border-radius: 20px;
+        padding: 6px 16px;
+        @include flexCenter();
+        justify-content: space-between;
+
+        &:hover {
+          background-color: $gray-50;
+        }
+
+        &.selected {
+          &::after {
+            content: "";
+            background: url("./../../../assets/pics/icons/check.svg") round;
+            background-size: cover;
+            @include minWidth(20px);
+            height: 20px;
+            @include flexCenter();
+          }
+        }
+      }
+
+      .empty {
+        @include body-14-regular;
+        color: $gray-200;
+        padding: 6px 16px;
+      }
+    }
+  }
+  &.active {
+    .choosedItem {
+      border-color: $gray-300;
+
+      .icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    .list {
       visibility: visible;
       opacity: 1;
-      top: 120%;
+      top: 105%;
+    }
+  }
+
+  .error {
+    @include footnote-12-regular;
+    color: $error;
+    padding-left: 16px;
+  }
+
+  &.error {
+    .choosedItem {
+      border-color: $error;
     }
   }
 }
