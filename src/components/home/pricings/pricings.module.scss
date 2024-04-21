@@ -2,8 +2,9 @@
 
 .pricingsContainer {
   margin-top: 120px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  width: 100%;
   gap: 32px;
 
   @include tablet {
