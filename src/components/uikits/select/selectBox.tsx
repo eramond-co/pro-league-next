@@ -22,7 +22,9 @@ export const SelectUikit: React.FC<PropsDataType> = ({
   onChange,
   messageError,
 }) => {
-  const [choosedItem, setChoosedItem] = useState<string | null>(null);
+  const [choosedItem, setChoosedItem] = useState<ListSelectBoxType | null>(
+    null
+  );
   const [openList, setOpenList] = useState<boolean>(false);
 
   useEffect(() => {
@@ -30,10 +32,15 @@ export const SelectUikit: React.FC<PropsDataType> = ({
   }, [choosedItem]);
 
   return (
-    <div
+    <button
       className={`${classes.selectUiki} ${openList ? classes.active : ""} ${
         messageError ? classes.error : ""
       }`}
+      type="button"
+      onBlur={(e) => {
+        e.stopPropagation();
+        setOpenList(false);
+      }}
     >
       <div className={classes.label}>
         <p>{label}</p>
@@ -46,7 +53,7 @@ export const SelectUikit: React.FC<PropsDataType> = ({
           setOpenList((state) => !state);
         }}
       >
-        <p>{choosedItem ? choosedItem : placeHolder}</p>
+        <p>{choosedItem?.title ? choosedItem.title : placeHolder}</p>
         <div className={classes.icon}>
           <ArrowDownIcon />
         </div>
@@ -58,11 +65,11 @@ export const SelectUikit: React.FC<PropsDataType> = ({
               <li
                 key={item.id}
                 onClick={() => {
-                  setChoosedItem(item.title);
+                  setChoosedItem(item);
                   setOpenList((state) => !state);
                 }}
                 className={
-                  item.title.toLowerCase() === choosedItem?.toLowerCase()
+                  item.title.toLowerCase() === choosedItem?.title.toLowerCase()
                     ? classes.selected
                     : ""
                 }
@@ -77,6 +84,6 @@ export const SelectUikit: React.FC<PropsDataType> = ({
       </div>
 
       {messageError && <span className={classes.error}>{messageError}</span>}
-    </div>
+    </button>
   );
 };

@@ -9,6 +9,8 @@ import { ButtonSeconddary } from "@/components/button-secondary/buttonSeconddary
 import { SelectUikit } from "@/components/uikits/select/selectBox";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import addRequestProleague from "@/api/add-request-proleague/addRequestProleague";
+import { useState } from "react";
 
 interface SelectBoxDataType {
   id: string;
@@ -23,6 +25,8 @@ interface FormDataType {
 }
 
 export const FormJoinLeague: React.FC = () => {
+  const [loading, setloading] = useState<boolean>(false);
+
   const listSelectOption: SelectBoxDataType[] = [
     {
       id: "1",
@@ -58,7 +62,18 @@ export const FormJoinLeague: React.FC = () => {
         choose_league: yup.string().required("Choose a league."),
       }),
       onSubmit: (values) => {
-        console.log(values);
+        setloading(true);
+
+        addRequestProleague({
+          email: values.email,
+          league: values.choose_league,
+          mobile: values.phone_number,
+          name: values.full_name,
+        }).then((res) => {
+          if (res.result) {
+            setloading(false);
+          }
+        });
       },
     });
 
@@ -92,12 +107,16 @@ export const FormJoinLeague: React.FC = () => {
       <SelectUikit
         placeHolder="Choose League"
         list={listSelectOption}
-        onChange={(v) => setFieldValue("choose_league", v)}
+        onChange={(v) => {
+          if (v) {
+            setFieldValue("choose_league", v.id);
+          }
+        }}
         messageError={touched.choose_league ? errors.choose_league : undefined}
       />
 
       <ButtonSeconddary type="submit">
-        <p>Submit</p>
+        <p>{loading ? "sending ..." : "Submit"}</p>
       </ButtonSeconddary>
     </form>
   );

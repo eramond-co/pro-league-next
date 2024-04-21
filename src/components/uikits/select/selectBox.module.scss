@@ -7,6 +7,9 @@
   gap: 4px;
   position: relative;
   z-index: 1;
+  outline: none;
+  background-color: transparent;
+  border: none;
 
   .label {
     padding-left: 14px;
@@ -113,6 +116,11 @@
     @include footnote-12-regular;
     color: $error;
     padding-left: 16px;
+    position: absolute;
+    top: calc(100% + 4px);
+    width: 100%;
+    left: 0;
+    text-align: left;
   }
 
   &.error {
