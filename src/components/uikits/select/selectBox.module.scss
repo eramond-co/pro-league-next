@@ -1,0 +1,64 @@
+@import "@/scss/index.scss";
+
+.selectUiki {
+  width: 100%;
+  @include flexCenter(column);
+  align-items: flex-start;
+  gap: 8px;
+  position: relative;
+
+  .label {
+    padding-left: 14px;
+    color: $gray-25;
+    @include body-14-regular;
+  }
+
+  .choosedItem {
+    width: 100%;
+    @include flexCenter();
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 40px;
+    color: $gray-900;
+    @include body-16-regular;
+    background-color: $gray-25;
+    border: 3px solid transparent;
+
+    &.default {
+      color: $gray-200;
+    }
+
+    &.active {
+      border-color: $gray-300;
+    }
+
+    .icon {
+      @include minWidth(24px);
+      height: 24px;
+      @include flexCenter();
+
+      svg {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .list {
+    position: absolute;
+    top: 90%;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    background-color: $gray-25;
+    border-radius: 8px;
+    transition: 0.3s;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      top: 120%;
+    }
+  }
+}
