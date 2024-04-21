@@ -5,6 +5,7 @@
   border-radius: 8px;
   position: relative;
   overflow: hidden;
+  @include maxWidth(378px);
 
   &::after {
     content: "";

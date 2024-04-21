@@ -2,11 +2,16 @@
 
 .pricingsContainer {
   margin-top: 120px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  @include flexCenter();
+  align-items: flex-start;
   width: 100%;
   gap: 32px;
 
+  @include laptop {
+    flex-wrap: wrap;
+  }
   @include tablet {
     margin-top: 48px;
   }
