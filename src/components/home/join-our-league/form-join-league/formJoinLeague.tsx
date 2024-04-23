@@ -26,6 +26,8 @@ interface FormDataType {
 
 export const FormJoinLeague: React.FC = () => {
   const [loading, setloading] = useState<boolean>(false);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [successStatus, setSuccessStatus] = useState<boolean>(false);
 
   const listSelectOption: SelectBoxDataType[] = [
     {
@@ -72,6 +74,10 @@ export const FormJoinLeague: React.FC = () => {
         }).then((res) => {
           if (res.result) {
             setloading(false);
+            setSuccessMessage("erfolgreich!")
+          }
+          else {
+            setSuccessMessage("erfolglos!")
           }
         });
       },
@@ -127,6 +133,12 @@ export const FormJoinLeague: React.FC = () => {
       <ButtonSeconddary type="submit">
         <p>{loading ? "Senden ..." : "Einreichen"}</p>
       </ButtonSeconddary>
+
+      {successMessage && (
+        <span className={successStatus ? classes.success : classes.error}>
+          {successMessage}
+        </span>
+      )}
     </form>
   );
 };

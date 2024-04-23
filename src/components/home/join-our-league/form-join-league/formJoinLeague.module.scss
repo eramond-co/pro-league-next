@@ -8,4 +8,17 @@
   button[type="submit"] {
     margin-top: 12px;
   }
+
+  .success,
+  .error {
+    @include body-16-regular;
+  }
+
+  .success {
+    color: $error;
+  }
+
+  .error {
+    color: $green;
+  }
 }
