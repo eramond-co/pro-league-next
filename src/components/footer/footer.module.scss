@@ -7,7 +7,7 @@
   background-color: $gray-800;
 
   @include tablet {
-    padding: 32px 16px
+    padding: 32px 16px;
   }
 
   .footer {
@@ -17,24 +17,58 @@
     align-items: flex-start;
 
     .body {
-      @include flexCenter(column);
-      align-items: flex-start;
+      width: 100%;
+      @include flexCenter();
+      justify-content: space-between;
+      align-items: flex-end;
       gap: 16px;
+      flex-wrap: wrap;
 
-      .title {
-        @include title-24-semibold;
+      .leftItem {
+        @include flexCenter(column);
+        align-items: flex-start;
+        gap: 16px;
 
-        a {
-          color: $gray-25;
+        .title {
+          @include title-24-semibold;
+
+          a {
+            color: $gray-25;
+          }
+        }
+
+        .socialMedia {
+          @include flexCenter();
+
+          ul {
+            @include flexCenter();
+            gap: 24px;
+          }
         }
       }
+    }
 
-      .socialMedia {
+    .list {
+      @include flexCenter();
+
+      ul {
+        width: 100%;
         @include flexCenter();
+        gap: 32px;
+        flex-wrap: wrap;
+        margin-left: auto;
 
-        ul {
-          @include flexCenter();
-          gap: 24px;
+        li {
+          @include body-16-regular;
+          color: $gray-25;
+
+          a {
+            color: $gray-25;
+          }
+
+          p {
+            opacity: 0.5;
+          }
         }
       }
     }

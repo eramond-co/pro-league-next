@@ -5,6 +5,7 @@ import {
   FacebookIcon,
   InstagramIcon,
   LinkedinIcon,
+  TikTokIcon,
   TwitterIcon,
 } from "@/svgs/svgs";
 
@@ -13,6 +14,12 @@ interface SocialMediaDataType {
   icon: React.ReactNode;
   title: string;
   link: string;
+}
+
+interface NavbarListDataType {
+  id: string;
+  title: string;
+  link?: string;
 }
 
 export const Footer: React.FC = () => {
@@ -41,26 +48,60 @@ export const Footer: React.FC = () => {
     //   icon: <LinkedinIcon />,
     //   link: "/",
     // },
+    {
+      id: "5",
+      title: "tikTok",
+      icon: <TikTokIcon />,
+      link: "https://www.tiktok.com/@soccaaustria?_t=8llgwbu0Ogq&_r=1",
+    },
+  ];
+
+  const listFooternav: NavbarListDataType[] = [
+    {
+      id: "1",
+      title: "Datenschutz",
+      // link: ""
+    },
+    {
+      id: "2",
+      title: "Impressum",
+      // link: ""
+    },
   ];
 
   return (
     <footer className={classes.footerWrapper}>
       <div className={classes.footer}>
         <div className={classes.body}>
-          <div className={classes.title}>
-            <Link href={"/"}>Pro League</Link>
+          <div className={classes.leftItem}>
+            <div className={classes.title}>
+              <Link href={"/"}>Pro League</Link>
+            </div>
+            <div className={classes.socialMedia}>
+              <ul>
+                {socialMedia.map((item) => (
+                  <li key={item.id}>
+                    <Link
+                      href={item.link}
+                      className={classes.icon}
+                      title={item.title}
+                    >
+                      {item.icon}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div className={classes.socialMedia}>
+          <div className={classes.list}>
             <ul>
-              {socialMedia.map((item) => (
-                <li key={item.id}>
-                  <Link
-                    href={item.link}
-                    className={classes.icon}
-                    title={item.title}
-                  >
-                    {item.icon}
-                  </Link>
+              {listFooternav.map((link) => (
+                <li key={link.id}>
+                  {link.link ? (
+                    <Link href={link.link}>{link.title}</Link>
+                  ) : (
+                    <p>{link.title}</p>
+                  )}
                 </li>
               ))}
             </ul>

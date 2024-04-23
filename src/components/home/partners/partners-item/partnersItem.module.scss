@@ -3,16 +3,16 @@
 .partnersItem {
   @include flexCenter();
   gap: 16px;
+  @include maxWidth(127px);
 
   .logo {
-    @include minWidth(56px);
-    height: 56px;
+    @include maxWidth(127px);
     @include flexCenter();
-    border-radius: 50%;
+    // border-radius: 50%;
 
     @include tablet {
-      @include minWidth(48px);
-      height: 48px;
+      // @include minWidth(48px);
+      // height: 48px;
       @include body-20-semibold;
     }
 
