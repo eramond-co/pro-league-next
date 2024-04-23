@@ -80,7 +80,7 @@ export const FormJoinLeague: React.FC = () => {
   return (
     <form className={classes.form} onSubmit={handleSubmit}>
       <InputDefaultUikit
-        placeHolder="Full Name"
+        placeHolder="Vollständiger Name"
         inputProps={{
           onChange: (e) => {
             setFieldValue("full_name", e.target.value);
@@ -97,15 +97,24 @@ export const FormJoinLeague: React.FC = () => {
         }}
         messageError={touched.email ? errors.email : undefined}
       />
-      <InputNumberUikit
+      {/* <InputNumberUikit
         onChange={(v) => {
           setFieldValue("phone_number", v);
         }}
         placeHolder="Phone Number"
         messageError={touched.phone_number ? errors.phone_number : undefined}
+      /> */}
+      <InputDefaultUikit
+        placeHolder="Telefonnummer"
+        inputProps={{
+          onChange: (e) => {
+            setFieldValue("phone_number", e.target.value);
+          },
+        }}
+        messageError={touched.phone_number ? errors.phone_number : undefined}
       />
       <SelectUikit
-        placeHolder="Choose League"
+        placeHolder="Wählen Sie Liga"
         list={listSelectOption}
         onChange={(v) => {
           if (v) {
@@ -116,7 +125,7 @@ export const FormJoinLeague: React.FC = () => {
       />
 
       <ButtonSeconddary type="submit">
-        <p>{loading ? "sending ..." : "Submit"}</p>
+        <p>{loading ? "Senden ..." : "Einreichen"}</p>
       </ButtonSeconddary>
     </form>
   );

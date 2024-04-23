@@ -20,20 +20,20 @@ export const Header: React.FC = () => {
       <div className={classes.header}>
         <div className={classes.textWrapper}>
           <div className={classes.title}>
-            <h3>Chance to win</h3>
-            <p>
-              <span>€</span> 15,000
-            </p>
+            <span>Socca Austria</span>
+            <h3>
+              Der Puls <br /> des modernen Fußballs!
+            </h3>
           </div>
           <div className={classes.description}>
             <p>
-              Lorem ipsum dolor sit amet. Aut voluptatem odit et quia sapiente
-              in modi eligendi ea quisquam.
+              Erleben Sie die Spannung unserer neu gegründeten Fußballliga, wo
+              Leidenschaft auf Professionalität trifft.
             </p>
           </div>
           <div className={classes.buttonWrapper}>
             <ButtonSeconddary className={classes.button} isLink link="#">
-              <p>Join To League</p>
+              <p>Verbinden</p>
             </ButtonSeconddary>
           </div>
         </div>

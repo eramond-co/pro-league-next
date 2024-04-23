@@ -5,12 +5,13 @@ export const JoinOurLeague: React.FC = () => {
   return (
     <div className={classes.joinOurLeague}>
       <div className={classes.title}>
-        <h3>Join Our Soccer League!</h3>
+        <h3>Treten Sie unserer Liga bei!</h3>
       </div>
       <div className={classes.description}>
         <p>
-          Enter your email and phone number below to join our league and stay
-          updated on matches, news, and registration details.
+          Melden Sie sich jetzt an und seien Sie Teil der Fußballrevolution!
+          Ihre Mannschaft könnte die nächste sein, die den großen Preis mit nach
+          Hause nimmt.
         </p>
       </div>
       <FormJoinLeague />

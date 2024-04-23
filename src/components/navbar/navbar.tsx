@@ -1,5 +1,6 @@
 import Link from "next/link";
 import classes from "./navbar.module.scss";
+import { Logo } from "@/svgs/svgs";
 
 interface PropsDataType {
   className?: string;
@@ -12,7 +13,9 @@ export const NavBar: React.FC<PropsDataType> = ({className}) => {
     >
       <div className={classes.navbar}>
         <Link href="/" className={classes.logoWrapper}>
-          <div className={classes.logo}></div>
+          <div className={classes.logo}>
+            <Logo />
+          </div>
           <div className={classes.text}>
             <p>Pro League</p>
           </div>

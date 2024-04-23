@@ -17,30 +17,30 @@ interface SocialMediaDataType {
 
 export const Footer: React.FC = () => {
   const socialMedia: SocialMediaDataType[] = [
-    {
-      id: "1",
-      title: "twitter",
-      icon: <TwitterIcon />,
-      link: "/",
-    },
+    // {
+    //   id: "1",
+    //   title: "twitter",
+    //   icon: <TwitterIcon />,
+    //   link: "/",
+    // },
     {
       id: "2",
       title: "instagram",
       icon: <InstagramIcon />,
-      link: "/",
+      link: "https://www.instagram.com/soccaaustria?igsh=cXZrczFia2Y5Mmpm",
     },
     {
       id: "3",
       title: "facebook",
       icon: <FacebookIcon />,
-      link: "/",
+      link: "https://www.instagram.com/soccaaustria?igsh=cXZrczFia2Y5Mmpm",
     },
-    {
-      id: "4",
-      title: "linkedin",
-      icon: <LinkedinIcon />,
-      link: "/",
-    },
+    // {
+    //   id: "4",
+    //   title: "linkedin",
+    //   icon: <LinkedinIcon />,
+    //   link: "/",
+    // },
   ];
 
   return (
@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
         </div>
         <div className={classes.footerBottom}>
           <div className={classes.text}>
-            <span>&#169;</span> 2024 Pro League, all rights reserved.
+            <span>&#169;</span> 2024 Pro League, Alle Rechte vorbehalten.
           </div>
         </div>
       </div>

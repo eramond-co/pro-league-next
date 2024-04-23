@@ -81,17 +81,21 @@
 
     @include tablet {
       padding: 122px 16px 0;
-      align-items: flex-start
+      align-items: flex-start;
     }
 
     .textWrapper {
-      @include maxWidth(pixelToVw(481));
+      @include maxWidth(pixelToVw(785));
       @include flexCenter(column);
       align-items: flex-start;
 
       @include tablet {
         max-width: none;
         width: 100%;
+      }
+
+      @media screen and (min-width: 1920px) {
+        max-width: 785px;
       }
 
       .title {
@@ -105,13 +109,38 @@
           @include heading-64-bold;
         }
 
+        @media screen and (min-width: 1920px) {
+          font-size: 80px;
+          line-height: 115px;
+        }
+
+        span {
+          @include title-32-semibold;
+          font-size: pixelToVw(32);
+          line-height: pixelToVw(46);
+
+          @include tablet {
+            @include body-20-semibold;
+          }
+
+          @media screen and (min-width: 1920px) {
+            font-size: 32px;
+            line-height: 46px;
+          }
+        }
+
         h3 {
           @include heading-64-bold;
-          font-size: pixelToVw(64);
-          line-height: pixelToVw(64);
+          font-size: pixelToVw(60);
+          line-height: pixelToVw(60);
 
           @include tablet {
             @include heading-48-semibold;
+          }
+
+          @media screen and (min-width: 1920px) {
+            font-size: 60px;
+            line-height: 60px;
           }
         }
 
@@ -126,6 +155,11 @@
 
             @include tablet {
               @include heading-48-semibold;
+            }
+
+            @media screen and (min-width: 1920px) {
+              font-size: 64px;
+              line-height: 64px;
             }
           }
         }
@@ -143,6 +177,11 @@
           margin-bottom: 24px;
           max-width: none;
         }
+
+        @media screen and (min-width: 1920px) {
+          @include body-20-regular;
+          margin-bottom: 24px;
+        }
       }
 
       .buttonWrapper {
@@ -157,6 +196,12 @@
           border-radius: pixelToVw(8);
 
           @include tablet {
+            border-radius: 8px;
+            @include body-16-medium;
+            height: 40px;
+          }
+
+          @media screen and (min-width: 1920px) {
             border-radius: 8px;
             @include body-16-medium;
             height: 40px;

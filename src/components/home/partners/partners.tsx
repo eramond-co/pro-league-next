@@ -35,7 +35,7 @@ export const Partners: React.FC = () => {
   return (
     <div className={classes.partners}>
       <div className={classes.title}>
-        <h3>Partners</h3>
+        <h3>Partner</h3>
       </div>
       <div className={classes.items}>
           {partners.map((partner) => (
