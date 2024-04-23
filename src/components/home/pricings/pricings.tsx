@@ -8,24 +8,24 @@ import card3 from "@/assets/pics/pricings/Frame 1000001558.jpg";
 const pricingData = [
   {
     image: card1,
-    logo: <PremierLeague />,
-    description: "Lorem ipsum is a placeholder text commonly used",
+    logo: "Pro League",
+    description: "In der Socca Pro League erstrahlt Fußball in neuem Glanz!",
     entrance: "3000",
-    reward: "15000",
+    reward: "15000€",
   },
   {
     image: card2,
-    logo: <PremierLeague />,
-    description: "Lorem ipsum is a placeholder text commonly used",
-    entrance: "1000",
-    reward: "5000",
+    logo: "Fans of Socca League",
+    description: "In unserer Hobbyliga ist Spiel und Spaß garantiert!",
+    entrance: "70€/Spiel",
+    reward: "Pokal und Medaillen",
   },
   {
     image: card3,
-    logo: <PremierLeague />,
-    description: "Lorem ipsum is a placeholder text commonly used",
+    logo: "Senior League",
+    description: "Fußballgenuss für Über-35-Jährige!",
     entrance: "FREE",
-    reward: "No Reward",
+    reward: "Coming soon",
   },
 ];
 
