@@ -65,7 +65,7 @@ export const Footer: React.FC = () => {
     {
       id: "2",
       title: "Impressum",
-      // link: ""
+      link: "/impressum"
     },
   ];
 

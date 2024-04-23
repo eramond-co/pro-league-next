@@ -5,6 +5,7 @@
   @include flexCenter();
   padding: 32px 120px;
   background-color: $gray-800;
+  margin-top: auto;
 
   @include tablet {
     padding: 32px 16px;
