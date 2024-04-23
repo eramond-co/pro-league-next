@@ -71,6 +71,10 @@
   @include flexCenter(column);
   align-items: flex-start;
   gap: 4px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: inherit;
 
   .inputNumber {
     width: 100%;
@@ -102,7 +106,7 @@
 
         .flag {
           @include minWidth(24px);
-          height: 16px;
+          height: 24px;
           @include flexCenter();
 
           img {
@@ -249,8 +253,15 @@
             color: $gray-200;
           }
         }
+      }
 
-        &.active {
+      &.active {
+        .choosedCountry {
+          .icon {
+            transform: rotate(180deg);
+          }
+        }
+        .list {
           visibility: visible;
           top: 120%;
           opacity: 1;

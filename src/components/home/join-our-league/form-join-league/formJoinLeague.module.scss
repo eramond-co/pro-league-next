@@ -4,4 +4,8 @@
   @include maxWidth(377px);
   @include flexCenter(column);
   gap: 16px;
+
+  button[type="submit"] {
+    margin-top: 12px;
+  }
 }

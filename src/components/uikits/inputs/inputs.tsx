@@ -134,6 +134,7 @@ export const InputNumberUikit: React.FC<PhoneNumber> = ({
   };
 
   const [value, setValue] = useState<string>();
+  
   const defaultOnChangeHandler = (value: string) => {
     const cleaned = value.replace(/\D/g, "").replace(/^0/gm, "");
     const match = [
@@ -157,13 +158,24 @@ export const InputNumberUikit: React.FC<PhoneNumber> = ({
   }, [valueInput, choosedCountry]);
 
   return (
-    <div
+    <button
+      onBlur={(e) => {
+        e.stopPropagation();
+        setToggleCountryList(false);
+      }}
+      type="button"
       className={`${classes.inputNumberWrapper} ${
         messageError ? classes.error : ""
-      } ${focusInput ? classes.focus : ""} ${className}`}
+      }
+      ${focusInput ? classes.focus : ""} ${className}
+      `}
     >
       <div className={classes.inputNumber}>
-        <div className={classes.listCountries}>
+        <div
+          className={`${classes.listCountries} ${
+            toggleCountrylist ? classes.active : ""
+          }`}
+        >
           <div
             className={classes.choosedCountry}
             onClick={() => {
@@ -183,11 +195,7 @@ export const InputNumberUikit: React.FC<PhoneNumber> = ({
             </div>
           </div>
 
-          <div
-            className={`${classes.list} ${
-              toggleCountrylist ? classes.active : ""
-            }`}
-          >
+          <div className={`${classes.list}`}>
             <div className={classes.header}>
               <div className={classes.searchBox}>
                 <div className={classes.icon}>
@@ -196,6 +204,9 @@ export const InputNumberUikit: React.FC<PhoneNumber> = ({
                 <input
                   type="text"
                   placeholder="Search Country"
+                  onFocus={() => {
+                    setToggleCountryList(true);
+                  }}
                   onInput={(e: any) => filterListinCountryList(e.target.value)}
                 />
               </div>
@@ -207,7 +218,7 @@ export const InputNumberUikit: React.FC<PhoneNumber> = ({
                     key={country.id}
                     onClick={() => {
                       setChoosedCountry(country);
-                      setToggleCountryList((state) => !state);
+                      setToggleCountryList(false);
                     }}
                     className={
                       country.id === choosedCountry?.id ? classes.selected : ""
@@ -245,6 +256,6 @@ export const InputNumberUikit: React.FC<PhoneNumber> = ({
         </label>
       </div>
       {messageError && <span className={classes.error}>{messageError}</span>}
-    </div>
+    </button>
   );
 };
