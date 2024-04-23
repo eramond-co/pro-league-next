@@ -25,7 +25,7 @@
   .content {
     padding: 24px;
     position: absolute;
-    bottom: 0;
+    bottom: 10%;
     left: 0;
     max-width: 65%;
 
@@ -50,6 +50,7 @@
     }
 
     .explain {
+      margin-top: 16px;
       @include body-20-regular;
       color: $gray-25;
 

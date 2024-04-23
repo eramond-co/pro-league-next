@@ -3,7 +3,7 @@ import classes from "./pricingCard.module.scss";
 
 export interface PricingCardProps {
   image: string | StaticImageData;
-  logo: React.ReactElement;
+  logo: React.ReactElement | string;
   description: string;
   reward: number | string;
   entrance: number | string;
@@ -26,14 +26,14 @@ const PricingCard: React.FC<PricingCardProps> = ({
           <div className={classes.reward}>
             <p className={classes.title}>Reward</p>
             <p className={classes.value}>
-              {reward === "No Reward" ? "" : <span>&#8364;</span>}
+              {/* {reward === "No Reward" ? "" : <span>&#8364;</span>} */}
               {reward.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
             </p>
           </div>
           <div className={classes.entrance}>
-            <p className={classes.title}>Entrance</p>
+            <p className={classes.title}>Eintrittspreis</p>
             <p className={classes.value}>
-              {entrance === "FREE" ? "" : <span>&#8364;</span>}
+              {/* {entrance === "FREE" ? "" : <span>&#8364;</span>} */}
               {entrance.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
             </p>
           </div>

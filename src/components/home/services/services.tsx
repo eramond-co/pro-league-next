@@ -14,25 +14,25 @@ const HomeServices: React.FC = () => {
   const services: ServicesDataType[] = [
     {
       id: "1",
-      title: "Kit",
+      title: "Trikots",
       description:
-        "Upgrade your team's look with our kits, designed for performance and style.",
+        "Jedes Team verfügt über professionelle Heim- und Auswärtstrikots.",
       className: classes.kit,
       icon: <KitIcon />,
     },
     {
       id: "2",
-      title: "Live Score",
+      title: "Echtzeit-Ergebnisse",
       description:
-        "Get instant updates on goals, assists, and match statistics as they happen.",
+        "Aktuelle Ergebnisse, Statistiken und alle wichtigen Infos – live und direkt.",
       className: classes.liveScore,
       icon: <LiveScoreIcon />,
     },
     {
       id: "3",
-      title: "Live Stream",
+      title: "Live-Übertragung",
       description:
-        "Watch the action unfold in real-time with our live streaming service.",
+        "Erleben Sie jedes Spiel live im Internet – von überall aus.",
       className: classes.liveStream,
       icon: <CameraIcon />,
     },
@@ -40,7 +40,7 @@ const HomeServices: React.FC = () => {
 
   return (
     <div className={classes.services}>
-      <h3 className={classes.title}>Services</h3>
+      <h3 className={classes.title}>Dienstleistungen</h3>
       <div className={classes.container}>
         {services.map((service) => (
           <ServicesItem

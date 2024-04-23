@@ -35,12 +35,17 @@
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 24px 48px;
+    padding: 24px 34px;
     z-index: 2;
 
     .logo {
-      width: 107px;
+      // width: 107px;
       margin: 0 auto;
+      text-align: center;
+      max-width: 175px;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 28.8px;
     }
 
     .info {
@@ -64,10 +69,13 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          @include heading-48-semibold;
+          // @include heading-32-semibold;
+          font-size: 32px;
+          font-weight: 600;
+          line-height: 46px;
           color: $gray-25;
           padding-bottom: 8px;
-          border-bottom: 1px solid $gray-400;
+          // border-bottom: 1px solid $gray-400;
         }
 
         span {
@@ -79,8 +87,12 @@
         margin-top: 8px;
         // padding: 0 55px;
         display: flex;
+        // gap: 32px;
         justify-content: space-between;
+        margin: 0 auto;
         align-items: center;
+        max-width: 173px;
+        border-top: 1px solid $gray-400;
 
         .title {
           @include body-14-regular;
