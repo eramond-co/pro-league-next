@@ -106,7 +106,7 @@
 
         @include tablet {
           margin-bottom: 8px;
-          @include heading-64-bold;
+          @include title-32-semibold;
         }
 
         @media screen and (min-width: 1920px) {
@@ -135,7 +135,7 @@
           line-height: pixelToVw(60);
 
           @include tablet {
-            @include heading-48-semibold;
+            @include title-32-semibold;
           }
 
           @media screen and (min-width: 1920px) {

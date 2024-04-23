@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
           <div className={classes.title}>
             <span>Socca Austria</span>
             <h3>
-              Der Puls <br /> des modernen Fußballs!
+              Der Puls des <br /> modernen Fußballs!
             </h3>
           </div>
           <div className={classes.description}>
