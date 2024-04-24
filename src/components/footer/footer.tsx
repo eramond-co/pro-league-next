@@ -65,7 +65,7 @@ export const Footer: React.FC = () => {
     {
       id: "2",
       title: "Impressum",
-      link: "/impressum"
+      link: "/impressum",
     },
   ];
 
@@ -75,7 +75,7 @@ export const Footer: React.FC = () => {
         <div className={classes.body}>
           <div className={classes.leftItem}>
             <div className={classes.title}>
-              <Link href={"/"}>Pro League</Link>
+              <Link href={"/"}>Socca Austria</Link>
             </div>
             <div className={classes.socialMedia}>
               <ul>
@@ -109,7 +109,7 @@ export const Footer: React.FC = () => {
         </div>
         <div className={classes.footerBottom}>
           <div className={classes.text}>
-            <span>&#169;</span> 2024 Pro League, Alle Rechte vorbehalten.
+            <span>&#169;</span> 2024 Socca Austria , Alle Rechte vorbehalten.
           </div>
         </div>
       </div>

@@ -32,8 +32,12 @@ export const Header: React.FC = () => {
             </p>
           </div>
           <div className={classes.buttonWrapper}>
-            <ButtonSeconddary className={classes.button} isLink link="#">
-              <p>Verbinden</p>
+            <ButtonSeconddary
+              className={classes.button}
+              isLink
+              link="#register"
+            >
+              <p>Anmelden</p>
             </ButtonSeconddary>
           </div>
         </div>

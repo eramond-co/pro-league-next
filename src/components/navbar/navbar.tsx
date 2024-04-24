@@ -6,18 +6,16 @@ interface PropsDataType {
   className?: string;
 }
 
-export const NavBar: React.FC<PropsDataType> = ({className}) => {
+export const NavBar: React.FC<PropsDataType> = ({ className }) => {
   return (
-    <div
-      className={`${classes.navbarWrapper} ${className}`}
-    >
+    <div className={`${classes.navbarWrapper} ${className}`}>
       <div className={classes.navbar}>
         <Link href="/" className={classes.logoWrapper}>
           <div className={classes.logo}>
             <Logo />
           </div>
           <div className={classes.text}>
-            <p>Pro League</p>
+            <p>Socca Austria</p>
           </div>
         </Link>
       </div>

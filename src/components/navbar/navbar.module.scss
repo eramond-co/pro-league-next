@@ -24,8 +24,8 @@
       @include maxWidth(138px);
 
       .logo {
-        @include minWidth(41px);
-        height: 56px;
+        @include minWidth(65px);
+        // height: 56px;
         @include flexCenter();
         border-radius: 50%;
         // background-color: $gray-25;

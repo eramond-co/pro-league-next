@@ -3,7 +3,7 @@ import classes from "./joinOurLeague.module.scss";
 
 export const JoinOurLeague: React.FC = () => {
   return (
-    <div className={classes.joinOurLeague}>
+    <div id="register" className={classes.joinOurLeague}>
       <div className={classes.title}>
         <h3>Treten Sie unserer Liga bei!</h3>
       </div>

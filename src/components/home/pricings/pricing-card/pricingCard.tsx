@@ -24,7 +24,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
         <div className={classes.info}>
           <p className={classes.description}>{description}</p>
           <div className={classes.reward}>
-            <p className={classes.title}>Reward</p>
+            <p className={classes.title}>Gewinn</p>
             <p className={classes.value}>
               {/* {reward === "No Reward" ? "" : <span>&#8364;</span>} */}
               {reward.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
