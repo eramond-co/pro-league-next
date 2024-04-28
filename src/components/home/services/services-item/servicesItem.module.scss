@@ -2,39 +2,29 @@
 
 .servicesItem {
   padding: 24px;
+  border: 1px solid;
+  border-radius: 10px;
   @include maxWidth(343px);
 
-  .icon {
+  .image {
     margin: 0 auto;
     padding: 16px;
-    width: max-content;
     border-radius: 50%;
-    @include minWidth(64px);
-    height: 64px;
+    width: 80%;
+    height: auto;
+    aspect-ratio: 289/266;
+    max-width: 290px;
     @include flexCenter();
-
-    &.kit {
-      background-color: $secondary-pink;
-    }
-
-    &.liveScore {
-      background-color: $primary-600;
-    }
-
-    &.liveStream {
-      background-color: $secondary-blue;
-    }
   }
 
   .title {
-    margin-top: 24px;
     @include title-24-semibold;
     color: $gray-25;
     text-align: center;
   }
 
   .explain {
-    margin-top: 16px;
+    margin-top: 8px;
     @include body-16-regular;
     color: $gray-25;
     text-align: center;

@@ -16,21 +16,18 @@
     @include flexCenter();
     align-items: flex-start;
     gap: 24px;
-
-    @include laptop {
-      flex-wrap: wrap;
-    }
+    flex-wrap: wrap;
 
     .kit {
-      background-color: $secondary-pink;
+      border-color: $secondary-pink;
     }
 
     .liveScore {
-      background-color: $primary-600;
+      border-color: $primary-600;
     }
 
     .liveStream {
-      background-color: $secondary-blue;
+      border-color: $secondary-blue;
     }
   }
 }
