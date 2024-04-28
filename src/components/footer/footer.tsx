@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
       id: "3",
       title: "facebook",
       icon: <FacebookIcon />,
-      link: "https://www.instagram.com/soccaaustria?igsh=cXZrczFia2Y5Mmpm",
+      link: "https://www.facebook.com/profile.php?id=61558530610998",
     },
     // {
     //   id: "4",
