@@ -50,6 +50,13 @@
   line-height: 28px;
 }
 
+@mixin body-18-medium {
+  font-family: "jost";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+
 @mixin body-18-regular {
   font-family: "jost";
   font-weight: 400;

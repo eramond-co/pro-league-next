@@ -28,24 +28,27 @@ const Impressum: React.FC = () => {
   ];
 
   return (
-    <div className={classes.impressumWrapper}>
-      <NavBar />
-      <main className={classes.mainWrapper}>
-        <div className={classes.main}>
-          <div className={classes.title}>
-            <h1>Impressum</h1>
+    <>
+      <title>Impressum</title>
+      <div className={classes.impressumWrapper}>
+        <NavBar />
+        <main className={classes.mainWrapper}>
+          <div className={classes.main}>
+            <div className={classes.title}>
+              <h1>Impressum</h1>
+            </div>
+            <ul>
+              {impressumList.map((item) => (
+                <li key={item.id}>
+                  <p>{item.title}</p>
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul>
-            {impressumList.map((item) => (
-              <li key={item.id}>
-                <p>{item.title}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </main>
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 

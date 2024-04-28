@@ -24,7 +24,7 @@
       @include maxWidth(138px);
 
       .logo {
-        @include minWidth(65px);
+        @include minWidth(140px);
         // height: 56px;
         @include flexCenter();
         border-radius: 50%;

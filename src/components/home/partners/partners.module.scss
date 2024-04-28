@@ -16,10 +16,10 @@
   }
 
   .items {
-    @include maxWidth(584px);
+    @include maxWidth(684px);
     @include flexCenter();
     flex-wrap: wrap;
     column-gap: 80px;
-    row-gap: 40px;
+    row-gap: 74px;
   }
 }

@@ -8,6 +8,7 @@
   .logo {
     @include maxWidth(150px);
     @include flexCenter();
+    position: relative;
     // border-radius: 50%;
 
     @include tablet {
@@ -20,10 +21,33 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
+      // filter: grayscale(100%);
+      transition: 0.3s;
+      opacity: 0;
+
+      &.backLogo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &.transparent {
       background-color: $gray-300;
+    }
+  }
+  &:hover {
+    .logo {
+      img {
+        opacity: 1;
+
+        &.backLogo {
+          opacity: 0;
+        }
+      }
     }
   }
 

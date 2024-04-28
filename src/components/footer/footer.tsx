@@ -85,6 +85,7 @@ export const Footer: React.FC = () => {
                       href={item.link}
                       className={classes.icon}
                       title={item.title}
+                      target="_blank"
                     >
                       {item.icon}
                     </Link>
