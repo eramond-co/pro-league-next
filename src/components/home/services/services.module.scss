@@ -16,10 +16,7 @@
     @include flexCenter();
     align-items: flex-start;
     gap: 24px;
-
-    @include laptop {
-      flex-wrap: wrap;
-    }
+    flex-wrap: wrap;
 
     .kit {
       border-color: $secondary-pink;
