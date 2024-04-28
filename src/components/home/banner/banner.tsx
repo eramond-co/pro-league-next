@@ -10,10 +10,10 @@ const BannerSection: React.FC = () => {
       <Image className={classes.background} src={bannerImg} alt="banner" />
       <Image className={classes.backgroundResp} src={bannerResp} alt="banner" />
       <div className={classes.content}>
-        <h3 className={classes.title}>Ligagebühren</h3>
+        <h3 className={classes.title}>Ligagebühren Pro League</h3>
         <p className={classes.explain}>
           Die Teilnahmegebühr pro Team beträgt 3000 Euro, inklusive aller Kosten
-          für Sportplatz - Schiedsrichter und Organisation
+          für Sportplatz - Schiedsrichter und Organisation{" "}
         </p>
         {/* <ButtonSeconddary className={classes.btn}>Button</ButtonSeconddary> */}
       </div>

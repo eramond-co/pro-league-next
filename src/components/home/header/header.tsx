@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
           </div>
           <div className={classes.description}>
             <p>
-              Erleben Sie die Spannung unserer neu gegründeten Fußballliga, wo
+              Erleben Sie die Spannung unserer neu gegründeten Soccaliga, wo
               Leidenschaft auf Professionalität trifft.
             </p>
           </div>

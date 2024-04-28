@@ -161,7 +161,7 @@ export const FormJoinLeague: React.FC = () => {
       </div>
 
       <ButtonSeconddary type="submit">
-        <p>{loading ? "Senden ..." : "Einreichen"}</p>
+        <p>{loading ? "Senden ..." : "Anmelden"}</p>
       </ButtonSeconddary>
 
       {successMessage && (

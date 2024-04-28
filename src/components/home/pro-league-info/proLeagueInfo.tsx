@@ -12,7 +12,7 @@ const ProLeagueInfo: React.FC = () => {
         aus, die jedem Match einen professionellen Rahmen verleiht. Verpassen
         Sie keine Sekunde und seien Sie live dabei, wenn die Spiele live
         gestreamt werden. Unterstützen Sie Ihre Mannschaft und erleben Sie, wie
-        aus lokalen Helden Legenden werden.
+        aus lokalen Helden Legenden werden.{" "}
       </p>
     </div>
   );
