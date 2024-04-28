@@ -1,13 +1,17 @@
 import { ServicesItem } from "./services-item/servicesItem";
 import classes from "./services.module.scss";
 import { KitIcon, LiveScoreIcon, CameraIcon } from "@/svgs/svgs";
+import { StaticImageData } from "next/image";
+import services1 from "@/assets/pics/services/Teams-Single 1.png";
+import services2 from "@/assets/pics/services/Teams-Single 1 (1).png";
+import services3 from "@/assets/pics/services/Teams-Single 1 (2).png";
 
 interface ServicesDataType {
   id: string;
+  image: string | StaticImageData;
   title: string;
   description: string;
-  className: string;
-  icon: React.ReactNode;
+  className?: string;
 }
 
 const HomeServices: React.FC = () => {
@@ -16,9 +20,9 @@ const HomeServices: React.FC = () => {
       id: "1",
       title: "Trikots",
       description:
-        "Jedes Team verfügt über professionelle Heim- und Auswärtstrikots.",
+        "Jedes Team bekommt von der Liga professionelle Trikotausrüstung für die Liga",
       className: classes.kit,
-      icon: <KitIcon />,
+      image: services1,
     },
     {
       id: "2",
@@ -26,7 +30,7 @@ const HomeServices: React.FC = () => {
       description:
         "Aktuelle Ergebnisse, Statistiken und alle wichtigen Infos – live und direkt.",
       className: classes.liveScore,
-      icon: <LiveScoreIcon />,
+      image: services2,
     },
     {
       id: "3",
@@ -34,7 +38,7 @@ const HomeServices: React.FC = () => {
       description:
         "Erleben Sie jedes Spiel live im Internet – von überall aus.",
       className: classes.liveStream,
-      icon: <CameraIcon />,
+      image: services3,
     },
   ];
 
@@ -45,7 +49,7 @@ const HomeServices: React.FC = () => {
         {services.map((service) => (
           <ServicesItem
             key={service.id}
-            icon={service.icon}
+            image={service.image}
             title={service.title}
             className={service.className}
             description={service.description}
