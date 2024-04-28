@@ -1,9 +1,9 @@
 import PricingCard, { PricingCardProps } from "./pricing-card/pricingCard";
 import classes from "./pricings.module.scss";
 import { PremierLeague } from "@/svgs/pouriyaSvgs";
-import card1 from "@/assets/pics/pricings/Frame 1000001553.jpg";
-import card2 from "@/assets/pics/pricings/Frame 1000001556 (1).jpg";
-import card3 from "@/assets/pics/pricings/Frame 1000001558.jpg";
+import card1 from "@/assets/pics/pricings/Frame 1000001553.png";
+import card2 from "@/assets/pics/pricings/Frame 1000001558.png";
+import card3 from "@/assets/pics/pricings/Frame 1000001556 (1).png";
 import { title } from "process";
 
 const pricingData = [
