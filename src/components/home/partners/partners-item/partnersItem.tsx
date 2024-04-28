@@ -16,7 +16,7 @@ export const PartnersItem: React.FC<PropsDataType> = ({
   backLogo,
 }) => {
   return (
-    <Link href={link ? link : ""} className={classes.partnersItem}>
+    <Link href={link ? link : ""} className={classes.partnersItem} target="_blank">
       <div className={`${classes.logo} ${!logo ? classes.transparent : ""}`}>
         {logo && <Image src={logo} alt={name ? name : ""} />}
         {backLogo && <Image className={classes.backLogo} src={backLogo} alt={name ? name : ""} />}

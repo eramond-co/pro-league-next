@@ -6,6 +6,7 @@ interface IData {
   email: string;
   mobile: string;
   league: string;
+  acceptme: number;
 }
 
 const addRequestProleague = async (data?: IData) => {

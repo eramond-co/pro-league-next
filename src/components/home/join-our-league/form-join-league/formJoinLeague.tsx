@@ -74,21 +74,20 @@ export const FormJoinLeague: React.FC = () => {
       onSubmit: (values) => {
         setloading(true);
 
-        console.log(values);
-
-        // addRequestProleague({
-        //   email: values.email,
-        //   league: values.choose_league,
-        //   mobile: values.phone_number,
-        //   name: values.full_name,
-        // }).then((res) => {
-        //   if (res.result) {
-        //     setloading(false);
-        //     setSuccessMessage("erfolgreich!");
-        //   } else {
-        //     setSuccessMessage("erfolglos!");
-        //   }
-        // });
+        addRequestProleague({
+          email: values.email,
+          league: values.choose_league,
+          mobile: values.phone_number,
+          name: values.full_name,
+          acceptme: values.checkbox === true ? 1 : 0,
+        }).then((res) => {
+          if (res.result) {
+            setloading(false);
+            setSuccessMessage("erfolgreich!");
+          } else {
+            setSuccessMessage("erfolglos!");
+          }
+        });
       },
     });
 
