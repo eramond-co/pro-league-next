@@ -1,0 +1,35 @@
+@import "@/scss/index";
+
+.youtubeVideoSection {
+  width: 100%;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+
+  .videoSection {
+    width: 60%;
+    display: flex;
+
+    > * {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      //height: 360px;
+    }
+  }
+  .contentSection {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 16px;
+
+    .title {
+      color: $gray-25;
+      @include title-24-semibold;
+    }
+    .text {
+      color: $gray-25;
+      @include body-20-regular;
+    }
+  }
+}
