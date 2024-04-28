@@ -131,16 +131,15 @@
 
         h3 {
           @include heading-64-bold;
-          font-size: pixelToVw(60);
-          line-height: pixelToVw(60);
+          font-size: pixelToVw(64);
+          line-height: pixelToVw(92);
 
           @include tablet {
             @include title-32-semibold;
           }
 
           @media screen and (min-width: 1920px) {
-            font-size: 60px;
-            line-height: 60px;
+            @include heading-64-bold;
           }
         }
 

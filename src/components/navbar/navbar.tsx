@@ -14,9 +14,9 @@ export const NavBar: React.FC<PropsDataType> = ({ className }) => {
           <div className={classes.logo}>
             <Logo />
           </div>
-          <div className={classes.text}>
+          {/* <div className={classes.text}>
             <p>Socca Austria</p>
-          </div>
+          </div> */}
         </Link>
       </div>
     </div>

@@ -22,6 +22,7 @@ interface FormDataType {
   email: string;
   phone_number: string;
   choose_league: string;
+  checkbox: boolean;
 }
 
 export const FormJoinLeague: React.FC = () => {
@@ -49,19 +50,26 @@ export const FormJoinLeague: React.FC = () => {
     email: "",
     phone_number: "",
     choose_league: "",
+    checkbox: false,
   };
 
   const { setFieldValue, handleSubmit, errors, touched } =
     useFormik<FormDataType>({
       initialValues,
       validationSchema: yup.object({
-        full_name: yup.string().required("Enter your Full Name."),
+        full_name: yup
+          .string()
+          .required("Geben Sie Ihren vollständigen Namen ein."),
         email: yup
           .string()
-          .required("Enter your Email.")
-          .email("Invalid Email."),
-        phone_number: yup.string().required("Enter your Phone Number."),
-        choose_league: yup.string().required("Choose a league."),
+          .required("geben sie ihre E-Mail Adresse ein.")
+          .email("Ungültige E-Mail."),
+        phone_number: yup
+          .string()
+          .required("Gib deine Telefonnummer ein.")
+          .min(11, "Ungültige Telefonnummer."),
+        choose_league: yup.string().required("Wählen Sie eine Liga."),
+        // checkbox: yup.boolean().required("erforderlich."),
       }),
       onSubmit: (values) => {
         setloading(true);
@@ -71,13 +79,13 @@ export const FormJoinLeague: React.FC = () => {
           league: values.choose_league,
           mobile: values.phone_number,
           name: values.full_name,
+          acceptme: values.checkbox === true ? 1 : 0,
         }).then((res) => {
           if (res.result) {
             setloading(false);
-            setSuccessMessage("erfolgreich!")
-          }
-          else {
-            setSuccessMessage("erfolglos!")
+            setSuccessMessage("erfolgreich!");
+          } else {
+            setSuccessMessage("erfolglos!");
           }
         });
       },
@@ -129,6 +137,28 @@ export const FormJoinLeague: React.FC = () => {
         }}
         messageError={touched.choose_league ? errors.choose_league : undefined}
       />
+
+      <div className={classes.checkboxLayout}>
+        <div className={classes.checkboxWrapper}>
+          <input
+            type="checkbox"
+            onChange={(e) => {
+              setFieldValue("checkbox", e.target.checked);
+              // console.log(e);
+            }}
+          />
+          <div className={classes.checkbox}></div>
+          <div className={classes.text}>
+            <p>
+              Ich habe Interesse der Liga beizutreten und möchte gerne mehr
+              Informationen.
+            </p>
+          </div>
+        </div>
+        {/* {touched.checkbox && (
+          <span className={classes.error}>{errors.checkbox}</span>
+        )} */}
+      </div>
 
       <ButtonSeconddary type="submit">
         <p>{loading ? "Senden ..." : "Einreichen"}</p>
