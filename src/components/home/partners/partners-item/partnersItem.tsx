@@ -6,13 +6,20 @@ interface PropsDataType {
   logo?: string | StaticImageData;
   name?: string;
   link?: string;
+  backLogo?: string | StaticImageData;
 }
 
-export const PartnersItem: React.FC<PropsDataType> = ({ name, logo , link}) => {
+export const PartnersItem: React.FC<PropsDataType> = ({
+  name,
+  logo,
+  link,
+  backLogo,
+}) => {
   return (
-    <Link href={link? link : ""} className={classes.partnersItem}>
+    <Link href={link ? link : ""} className={classes.partnersItem}>
       <div className={`${classes.logo} ${!logo ? classes.transparent : ""}`}>
         {logo && <Image src={logo} alt={name ? name : ""} />}
+        {backLogo && <Image className={classes.backLogo} src={backLogo} alt={name ? name : ""} />}
       </div>
       {name && (
         <div className={classes.name}>
