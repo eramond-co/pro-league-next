@@ -1,20 +1,17 @@
 //heading
 @mixin heading-80-bold {
-  font-family: "jost";
   font-weight: 700;
   font-size: 80px;
   line-height: 115.6px;
 }
 
 @mixin heading-64-bold {
-  font-family: "jost";
   font-weight: 700;
   font-size: 64px;
   line-height: 92.48px;
 }
 
 @mixin heading-48-semibold {
-  font-family: "jost";
   font-weight: 600;
   font-size: 48px;
   line-height: 69.36px;
@@ -22,14 +19,12 @@
 
 //title
 @mixin title-32-semibold {
-  font-family: "jost";
   font-weight: 600;
   font-size: 32px;
   line-height: 46.24px;
 }
 
 @mixin title-24-semibold {
-  font-family: "jost";
   font-weight: 600;
   font-size: 24px;
   line-height: 34.68px;
@@ -37,56 +32,48 @@
 
 //body
 @mixin body-20-semibold {
-  font-family: "jost";
   font-weight: 600;
   font-size: 20px;
   line-height: 28.9px;
 }
 
 @mixin body-16-medium {
-  font-family: "jost";
   font-weight: 500;
   font-size: 16px;
   line-height: 28px;
 }
 
 @mixin body-18-medium {
-  font-family: "jost";
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
 }
 
 @mixin body-18-regular {
-  font-family: "jost";
   font-weight: 400;
   font-size: 18px;
   line-height: 32px;
 }
 
 @mixin body-20-regular {
-  font-family: "jost";
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
 }
 
 @mixin body-16-regular {
-  font-family: "jost";
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
 }
 
 @mixin body-16-bold {
-  font-family: "jost";
   font-weight: 700;
   font-size: 16px;
   line-height: 23px;
 }
 
 @mixin body-14-regular {
-  font-family: "jost";
   font-weight: 400;
   font-size: 14px;
   line-height: 28px;
@@ -94,14 +81,12 @@
 
 //footnote
 @mixin footnote-12-regular {
-  font-family: "jost";
   font-weight: 400;
   font-size: 12px;
   line-height: 17.34px;
 }
 
 @mixin footnote-14-regular {
-  font-family: "jost";
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;

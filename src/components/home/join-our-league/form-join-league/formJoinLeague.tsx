@@ -37,11 +37,11 @@ export const FormJoinLeague: React.FC = () => {
     },
     {
       id: "2",
-      title: "Amateur League",
+      title: "Fans of Socca League",
     },
     {
       id: "3",
-      title: "Hobby League",
+      title: "Senior League",
     },
   ];
 
