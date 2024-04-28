@@ -1,6 +1,7 @@
 import Link from "next/link";
 import classes from "./footer.module.scss";
 import {
+  CallIcon,
   CopyRightIcon,
   FacebookIcon,
   InstagramIcon,
@@ -69,6 +70,14 @@ export const Footer: React.FC = () => {
     },
   ];
 
+  const listInforamtion = [
+    {
+      id: "1",
+      icon: <CallIcon />,
+      text: "+43 660 109 4900",
+    },
+  ];
+
   return (
     <footer className={classes.footerWrapper}>
       <div className={classes.footer}>
@@ -89,6 +98,17 @@ export const Footer: React.FC = () => {
                     >
                       {item.icon}
                     </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className={classes.information}>
+              <ul>
+                {listInforamtion.map((info) => (
+                  <li key={info.id}>
+                    <div className={classes.icon}>{info.icon}</div>
+                    <p>{info.text}</p>
                   </li>
                 ))}
               </ul>

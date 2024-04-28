@@ -11,7 +11,7 @@ const pricingData = [
     image: card1,
     logo: "Pro League",
     description: "In der Socca Pro League erstrahlt Fußball in neuem Glanz!",
-    entrance: "3000€",
+    entrance: "3000€/Saison",
     reward: "15000€",
     items: [
       "Zwei Garnituren Trikots für alle Teilnehmer",

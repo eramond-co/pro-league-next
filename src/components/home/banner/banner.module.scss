@@ -2,6 +2,11 @@
 
 .bannerSect {
   position: relative;
+  width: 100%;
+
+  @include tablet {
+    height: 500px;
+  }
 
   .background {
     width: 100%;
@@ -14,11 +19,13 @@
 
   .backgroundResp {
     width: 100%;
+    height: 100%;
     display: none;
-    object-fit: contain;
+    object-fit: cover;
+    border-radius: 8px;
 
     @include tablet {
-      display: block;
+      display: flex;
     }
   }
 
@@ -30,12 +37,12 @@
     max-width: 65%;
 
     @include tablet {
-      max-width: unset;
+      max-width: none;
     }
 
     @include tablet {
       top: 0;
-      bottom: unset;
+      bottom: none;
     }
 
     .title {

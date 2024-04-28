@@ -50,6 +50,8 @@
     }
 
     .info {
+      @include flexCenter(column);
+
       .description {
         @include body-16-medium;
         color: $gray-25;
@@ -92,7 +94,8 @@
         justify-content: space-between;
         margin: 0 auto;
         align-items: center;
-        max-width: 173px;
+        // max-width: 173px;
+        gap: 32px;
         border-top: 1px solid $gray-400;
 
         .title {

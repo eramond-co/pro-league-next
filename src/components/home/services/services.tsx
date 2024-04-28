@@ -20,7 +20,7 @@ const HomeServices: React.FC = () => {
       id: "1",
       title: "Trikots",
       description:
-        "Jedes Team bekommt von der Liga professionelle Trikotausrüstung für die Liga",
+        "Jedes Team bekommt von der Liga professionelle Trikotausrüstung.",
       className: classes.kit,
       image: services1,
     },

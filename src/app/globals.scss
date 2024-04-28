@@ -101,7 +101,7 @@ body {
 }
 
 * {
-	font-family: "jost";
+  font-family: "jost";
 }
 
 a {
@@ -110,4 +110,13 @@ a {
 
 li {
   list-style-type: none;
+}
+
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
 }

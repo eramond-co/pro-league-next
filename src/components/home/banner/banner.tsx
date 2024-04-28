@@ -8,7 +8,7 @@ const BannerSection: React.FC = () => {
   return (
     <div className={classes.bannerSect}>
       <Image className={classes.background} src={bannerImg} alt="banner" />
-      <Image className={classes.backgroundResp} src={bannerResp} alt="banner" />
+      <Image className={classes.backgroundResp} src={bannerResp} alt="banner" width={1000} height={1000} />
       <div className={classes.content}>
         <h3 className={classes.title}>Ligagebühren Pro League</h3>
         <p className={classes.explain}>
