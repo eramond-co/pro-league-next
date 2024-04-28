@@ -7,6 +7,8 @@ import HomeServices from "./services/services";
 import { Partners } from "./partners/partners";
 import { JoinOurLeague } from "./join-our-league/joinOurLeague";
 import BannerSection from "./banner/banner";
+import { YoutubeVideo } from "@/components/home/youtube-video/page";
+import React from "react";
 
 export const HomeComponent: React.FC = () => {
   return (
@@ -18,6 +20,7 @@ export const HomeComponent: React.FC = () => {
           <Pricings />
           <HomeServices />
           <BannerSection />
+          <YoutubeVideo />
           <Partners />
           <JoinOurLeague />
         </div>
