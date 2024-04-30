@@ -9,10 +9,12 @@ import { JoinOurLeague } from "./join-our-league/joinOurLeague";
 import BannerSection from "./banner/banner";
 import { YoutubeVideo } from "@/components/home/youtube-video/page";
 import React from "react";
+import ScrollTop from "../scroll-top/scrollTop";
 
 export const HomeComponent: React.FC = () => {
   return (
     <div className={classes.home}>
+      <ScrollTop />
       <Header />
       <main className={classes.mainWrapper}>
         <div className={classes.main}>

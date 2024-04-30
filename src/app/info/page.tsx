@@ -2,10 +2,12 @@ import { Header } from "@/components/home/header/header";
 import classes from "./page.module.scss";
 import { Footer } from "@/components/footer/footer";
 import { NavBar } from "@/components/navbar/navbar";
+import ScrollTop from "@/components/scroll-top/scrollTop";
 
 const Info: React.FC = () => {
   return (
     <>
+      <ScrollTop />
       <title>Socca Austria</title>
       <div className={classes.impressumWrapper}>
         <NavBar />
