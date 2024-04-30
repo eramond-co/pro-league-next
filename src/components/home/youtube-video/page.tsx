@@ -7,14 +7,14 @@ export const YoutubeVideo = () => {
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/JXE1Q-pjc1c?si=xkKSPO0DnJfE5und&amp;controls=0"
+          src="https://www.youtube.com/embed/boBl9KNfxis?si=xJpGyEAjr4Df3gDR"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
           className={style.video}
-        ></iframe>
+        />
       </div>
       <div className={style.contentSection}>
         <h3 className={style.title}>SOCCA PRO LEAGUE </h3>

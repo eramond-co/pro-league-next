@@ -20,7 +20,7 @@ export const HomeComponent: React.FC = () => {
           <Pricings />
           <HomeServices />
           <BannerSection />
-          {/*<YoutubeVideo />*/}
+          <YoutubeVideo />
           <Partners />
           <JoinOurLeague />
         </div>
