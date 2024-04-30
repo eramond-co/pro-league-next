@@ -1,0 +1,20 @@
+@import "@/scss/index.scss";
+
+.button {
+  padding: 0 24px;
+  outline: none;
+  @include body-16-medium;
+  color: $secondary-purple;
+  gap: 8px;
+  background-color: transparent;
+  height: 40px;
+  border: 1px solid $secondary-purple;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+  @include flexCenter();
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

@@ -6,6 +6,7 @@ import { ButtonSeconddary } from "@/components/button-secondary/buttonSeconddary
 //image
 import HeroImageDesktop from "@/assets/pics/header/hero-image.png";
 import HeroimageMobile from "@/assets/pics/header/hero-image-mobile.png";
+import { ButtonOutlined } from "@/components/button-outlined/buttonOutlined";
 
 export const Header: React.FC = () => {
   return (
@@ -39,6 +40,9 @@ export const Header: React.FC = () => {
             >
               <p>Anmelden</p>
             </ButtonSeconddary>
+            <ButtonOutlined className={classes.button} isLink link="/info">
+              Infos zur Anmeldung
+            </ButtonOutlined>
           </div>
         </div>
       </div>

@@ -189,6 +189,7 @@
         width: 100%;
         @include flexCenter();
         justify-content: flex-start;
+        gap: 16px;
 
         .button {
           font-size: pixelToVw(16);
