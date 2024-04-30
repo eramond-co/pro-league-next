@@ -19,7 +19,7 @@ export const YoutubeVideo = () => {
       <div className={style.contentSection}>
         <h3 className={style.title}>SOCCA PRO LEAGUE </h3>
         <p className={style.text}>
-          Die Liga startet in September 2024 und nimmt lediglich 10 Teams auf.
+          Die Liga startet in September 2024 und nimmt lediglich 16 Teams auf.
           Jedes Team wird mit zwei Garnituren Trikots inklusive Druck und freier
           Modell und Farbwahl ausgestattet.
           <br />

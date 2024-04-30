@@ -68,6 +68,11 @@ export const Footer: React.FC = () => {
       title: "Impressum",
       link: "/impressum",
     },
+    {
+      id: "3",
+      title: "Infos zur Anmeldung",
+      link: "/info",
+    },
   ];
 
   const listInforamtion = [
