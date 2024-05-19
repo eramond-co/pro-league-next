@@ -10,6 +10,7 @@ import BannerSection from "./banner/banner";
 import { YoutubeVideo } from "@/components/home/youtube-video/page";
 import React from "react";
 import ScrollTop from "../scroll-top/scrollTop";
+import RegisteredTeamsSection from "./registered-teams/registeredTeams";
 
 export const HomeComponent: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ export const HomeComponent: React.FC = () => {
         <div className={classes.main}>
           <ProLeagueInfo />
           <Pricings />
+          <RegisteredTeamsSection />
           <HomeServices />
           <BannerSection />
           <YoutubeVideo />
