@@ -1,0 +1,13 @@
+@import "@/scss/index";
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+  @include title-32-semibold;
+  color: $gray-25;
+  @include tablet {
+    gap: 32px;
+    @include title-24-semibold;
+  }
+}

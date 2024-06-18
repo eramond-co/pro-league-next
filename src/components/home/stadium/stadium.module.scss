@@ -1,0 +1,50 @@
+@import "@/scss/index";
+
+.main {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  .img {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    > img {
+      width: 100%;
+      height: auto;
+      min-width: 784px;
+      @include tablet {
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+  .detail {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: rgba(28, 0, 50, 0.4);
+    min-width: 250px;
+    backdrop-filter: blur(2px);
+    color: $gray-25;
+    @include tablet {
+      bottom: 8px;
+      left: 8px;
+      min-width: 190px;
+    }
+    > h2 {
+      @include title-32-semibold;
+      @include tablet {
+        @include body-20-semibold;
+      }
+    }
+    > p {
+      @include body-20-regular;
+      @include tablet {
+        @include body-14-regular;
+      }
+    }
+  }
+}

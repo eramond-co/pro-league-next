@@ -30,6 +30,12 @@
   line-height: 34.68px;
 }
 
+@mixin title-24-regular {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+}
+
 //body
 @mixin body-20-semibold {
   font-weight: 600;

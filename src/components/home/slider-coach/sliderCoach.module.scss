@@ -1,0 +1,114 @@
+@import "@/scss/index";
+
+.sliderCoachWrapper {
+  width: 100%;
+  position: relative;
+
+  .sliderCoach {
+    // padding: 100px 100px 183px;
+    @include maxWidth(1920px);
+
+    @include tablet {
+      padding: 100px 16px;
+    }
+
+    :global {
+      .alice-carousel {
+        padding: 0 60px;
+      }
+      .alice-carousel__dots {
+        @include tablet {
+          margin-top: 16px;
+        }
+        .alice-carousel__dots-item {
+          background-color: $gray-600;
+          box-shadow: none;
+          width: 12px;
+          height: 12px;
+
+          &.__active {
+            background-color: $primary-600;
+          }
+        }
+      }
+      .alice-carousel__prev-btn {
+        display: none !important;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        @include flexCenter();
+        left: 0;
+
+        @include tablet {
+          bottom: auto;
+          top: 5%;
+        }
+
+        .alice-carousel__prev-btn-wrapper {
+          width: 100%;
+          height: 100%;
+          @include flexCenter();
+
+          .alice-carousel__prev-btn-item {
+            @include flexCenter();
+            width: 100%;
+            height: 100%;
+
+            span {
+              width: 100%;
+              height: 100%;
+              @include flexCenter();
+            }
+          }
+        }
+
+        &:hover {
+          border-color: red;
+        }
+      }
+      .alice-carousel__next-btn {
+        display: none !important;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        @include flexCenter();
+        right: 0;
+
+        @include tablet {
+          bottom: auto;
+          top: 5%;
+        }
+
+        .alice-carousel__next-btn-wrapper {
+          width: 100%;
+          height: 100%;
+          @include flexCenter();
+
+          .alice-carousel__next-btn-item {
+            @include flexCenter();
+            width: 100%;
+            height: 100%;
+
+            span {
+              width: 100%;
+              height: 100%;
+              @include flexCenter();
+            }
+          }
+        }
+
+        &:hover {
+          border-color: red;
+        }
+      }
+    }
+  }
+}

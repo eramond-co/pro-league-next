@@ -14,7 +14,7 @@ const pricingData = [
     entrance: "3000€/Saison",
     reward: "15000€",
     items: [
-      "Zwei Garnituren Trikots für alle Teilnehmer",
+      "Zwei Garnituren Trikots für alle Teilnehmer (Anmeldungen bis 15. Juli)",
       "Livestream aller Spiele",
       "Komplette Statistik aller Spieler und Mannschaften",
       "Professionelle Schiedsrichter",

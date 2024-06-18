@@ -1,0 +1,52 @@
+@import "@/scss/index";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  width: 100%;
+  align-items: center;
+  .title {
+    @include title-32-semibold;
+  }
+  .items {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    @include tablet {
+      flex-direction: column;
+    }
+    .item {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+      width: 100%;
+      .img {
+        margin-bottom: -37px;
+        z-index: 2;
+      }
+      .texts {
+        height: 198px;
+        width: 100%;
+        min-width: 100%;
+        z-index: 1;
+        background-color: $gray-800;
+        border-radius: 8px;
+        @include flexCenter(column);
+        justify-content: end;
+        padding-bottom: 24px;
+        text-align: center;
+        @include title-24-semibold;
+        gap: 8px;
+        > a {
+          @include body-16-bold;
+          color: $primary-600;
+        }
+      }
+    }
+  }
+}
