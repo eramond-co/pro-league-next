@@ -15,6 +15,7 @@ import Counter from "./counter/counter";
 import IsfPartners from "./isf-partners/isfPartners";
 import Stadium from "./stadium/stadium";
 import { SliderCoach } from "./slider-coach/sliderCoach";
+import RegisteredTeamsSection from "./registered-teams/registeredTeams";
 
 export const HomeComponent: React.FC = () => {
   return (
@@ -27,6 +28,7 @@ export const HomeComponent: React.FC = () => {
           <Counter />
           <ProLeagueInfo />
           <Pricings />
+          <RegisteredTeamsSection />
           <HomeServices />
           <BannerSection />
           <YoutubeVideo />
