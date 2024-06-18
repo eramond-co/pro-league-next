@@ -63,7 +63,7 @@ const CountDown: React.FC<IProps> = ({ targetDate }) => {
             ? days
                 .toString()
                 .split("")
-                .map((v) => <p>{v}</p>)
+                .map((v, i) => <p key={i}>{v}</p>)
             : days
                 .toString()
                 .split("")
@@ -86,7 +86,7 @@ const CountDown: React.FC<IProps> = ({ targetDate }) => {
             ? hours
                 .toString()
                 .split("")
-                .map((v) => <p>{v}</p>)
+                .map((v, i) => <p key={i}>{v}</p>)
             : hours
                 .toString()
                 .split("")
@@ -109,7 +109,7 @@ const CountDown: React.FC<IProps> = ({ targetDate }) => {
             ? minutes
                 .toString()
                 .split("")
-                .map((v) => <p>{v}</p>)
+                .map((v, i) => <p key={i}>{v}</p>)
             : minutes
                 .toString()
                 .split("")

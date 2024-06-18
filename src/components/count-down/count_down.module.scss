@@ -1,55 +1,55 @@
 @import "@/scss/index";
 
 .counter_items {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 48px;
-    @include tablet {
-        gap: 16px;
-    }
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 48px;
+  @include tablet {
+    gap: 16px;
+  }
 }
 
 .counter_items .item {
-    // margin-right: 27px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    gap: 4px;
+  // margin-right: 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 4px;
 }
 
 .counter_items .item:last-child {
-    margin-right: 0px;
+  margin-right: 0px;
 }
 
 .counter_items .item .number {
+  display: flex;
+  align-items: center;
+  @include heading-64-bold;
+  color: $gray-25;
+  gap: 4px;
+  @include tablet {
+    @include title-32-semibold;
+  }
+  p {
+    width: 92px;
+    height: 92px;
+    background-color: $primary-700;
     display: flex;
     align-items: center;
-    @include heading-64-bold;
-    color: $gray-25;
-    gap: 4px;
+    justify-content: center;
+    border-radius: 8px;
     @include tablet {
-        @include title-32-semibold;
+      width: 48px;
+      height: 48px;
     }
-    > p {
-        width: 92px;
-        height: 92px;
-        background-color: $primary-700;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 8px;
-        @include tablet {
-            width: 48px;
-            height: 48px;
-        }
-    }
+  }
 }
 
 .counter_items .item .title {
-    @include title-24-regular;
-    @include tablet {
-        @include body-18-regular;
-    }
+  @include title-24-regular;
+  @include tablet {
+    @include body-18-regular;
+  }
 }
