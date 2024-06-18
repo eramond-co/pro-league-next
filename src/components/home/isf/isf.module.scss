@@ -1,0 +1,40 @@
+@import "@/scss/index";
+
+.main {
+  width: 100%;
+  background: url("../../../assets/pics/isf/background.png");
+  padding: 24px 40px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include tablet {
+    background: url("../../../assets/pics/isf/background-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .texts {
+    color: $gray-25;
+    > h2 {
+      @include title-32-semibold;
+    }
+    > p {
+      @include title-24-semibold;
+    }
+  }
+  .socca {
+    width: 340px;
+    height: auto;
+    > img {
+      width: 100%;
+      height: auto;
+    }
+    @include tablet {
+      width: 100%;
+    }
+  }
+}

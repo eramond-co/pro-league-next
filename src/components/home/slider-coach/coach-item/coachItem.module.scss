@@ -1,0 +1,63 @@
+@import "@/scss/index.scss";
+
+.coachItem {
+  width: 100%;
+  @include flexCenter();
+  gap: 36px;
+  align-items: flex-end;
+
+  @include tablet {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .coachInformation {
+    @include flexCenter();
+    gap: 30px;
+
+    @include tablet {
+      gap: 24px;
+    }
+
+    .image {
+      @include minWidth(240px);
+      // height: 120px;
+      @include flexCenter();
+      // overflow: hidden;
+
+      @include tablet {
+        @include minWidth(200px);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  > .description {
+    @include flexCenter(column);
+    width: 100%;
+    color: $gray-25;
+    align-items: flex-start;
+    gap: 16px;
+    padding-bottom: 57px;
+    @include body-20-regular;
+
+    @include tablet {
+      @include body-16-regular;
+      padding-bottom: 0;
+    }
+
+    .name {
+      @include title-32-semibold;
+      @include tablet {
+        width: 100%;
+        @include title-24-semibold;
+      }
+    }
+  }
+}
