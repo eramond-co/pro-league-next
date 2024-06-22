@@ -5,6 +5,7 @@ import Link from "next/link";
 interface PropsDataType {
   children: React.ReactNode;
   buttonProps?: ButtonHTMLAttributes<HTMLButtonElement>;
+  linkProps?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
   isLink?: boolean;
   type?: "submit" | "button" | "reset" | undefined;
   link?: string;
@@ -14,17 +15,26 @@ interface PropsDataType {
 export const ButtonSeconddary: React.FC<PropsDataType> = ({
   children,
   buttonProps,
+  linkProps,
   isLink = false,
   className,
   type,
   link,
 }) => {
   return isLink ? (
-    <Link href={link ? link : ""} className={`${classes.button} ${className}`}>
+    <Link
+      {...linkProps}
+      href={link ? link : ""}
+      className={`${classes.button} ${className}`}
+    >
       {children}
     </Link>
   ) : (
-    <button {...buttonProps} type={type} className={`${classes.button} ${className}`}>
+    <button
+      {...buttonProps}
+      type={type}
+      className={`${classes.button} ${className}`}
+    >
       {children}
     </button>
   );

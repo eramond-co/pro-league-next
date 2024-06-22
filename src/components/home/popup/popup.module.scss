@@ -1,0 +1,79 @@
+@import "@/scss/index";
+
+.main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100dvh;
+  // background: rgba(28, 0, 50, 0.4);
+  // backdrop-filter: blur(10px);
+  padding: 16px;
+  @include flexCenter;
+
+  .backdrop {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(28, 0, 50, 0.4);
+    backdrop-filter: blur(10px);
+  }
+
+  .content {
+    border-radius: 8px;
+    background: rgba(10, 0, 50, 0.8);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .img {
+      width: 289px;
+      @include tablet {
+        width: 223px;
+      }
+      > img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .title {
+      @include title-32-semibold;
+      text-align: center;
+      @include tablet {
+        @include title-24-semibold;
+      }
+    }
+
+    .des {
+      @include title-24-regular;
+      text-align: center;
+      margin-top: 4px;
+      @include tablet {
+        @include body-16-regular;
+      }
+      > h2 {
+        @include title-32-semibold;
+        color: $primary-700;
+        @include tablet {
+          @include body-20-semibold;
+        }
+      }
+      > span {
+        @include title-24-semibold;
+        @include tablet {
+          @include body-16-medium;
+        }
+      }
+    }
+    .btn {
+      margin-top: 16px;
+    }
+  }
+}

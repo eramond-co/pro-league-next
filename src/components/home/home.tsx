@@ -16,10 +16,12 @@ import IsfPartners from "./isf-partners/isfPartners";
 import Stadium from "./stadium/stadium";
 import { SliderCoach } from "./slider-coach/sliderCoach";
 import RegisteredTeamsSection from "./registered-teams/registeredTeams";
+import Popup from "./popup/popup";
 
 export const HomeComponent: React.FC = () => {
   return (
     <div className={classes.home}>
+      <Popup />
       <ScrollTop />
       <Header />
       <main className={classes.mainWrapper}>
