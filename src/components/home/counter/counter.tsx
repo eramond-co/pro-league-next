@@ -8,7 +8,7 @@ const Counter: React.FC = () => {
     <>
       <div className={style.main}>
         <div className={style.title}>Bis zum Ligastart</div>
-        <CountDown targetDate={new Date("9/15/24")} />
+        <CountDown targetDate={new Date(2024, 8, 15, 9)} />
       </div>
     </>
   );
