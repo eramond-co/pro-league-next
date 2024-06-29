@@ -17,10 +17,12 @@ import Stadium from "./stadium/stadium";
 import { SliderCoach } from "./slider-coach/sliderCoach";
 import RegisteredTeamsSection from "./registered-teams/registeredTeams";
 import Popup from "./popup/popup";
+import { NavBar } from "../navbar/navbar";
 
 export const HomeComponent: React.FC = () => {
   return (
     <div className={classes.home}>
+      <NavBar className={classes.navbar} />
       <Popup />
       <ScrollTop />
       <Header />

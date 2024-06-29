@@ -15,13 +15,17 @@
     @include maxWidth(1200px);
     @include flexCenter();
     justify-content: flex-start;
-
+    align-items: end;
+    gap: 160px;
+    @include tablet {
+      gap: 30px;
+    }
     .logoWrapper {
       @include flexCenter();
       gap: 30px;
       color: $gray-25;
       @include body-20-semibold;
-      @include maxWidth(138px);
+      // @include maxWidth(138px);
 
       .logo {
         @include minWidth(140px);
@@ -29,11 +33,30 @@
         @include flexCenter();
         border-radius: 50%;
         // background-color: $gray-25;
+        @include tablet {
+          @include minWidth(100px);
+        }
 
         svg {
           width: 100%;
           height: 100%;
           object-fit: contain;
+        }
+      }
+    }
+
+    .linkList {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      a {
+        @include body-16-regular;
+        color: $gray-25;
+        @include tablet {
+          @include body-14-regular;
+        }
+        &.active {
+          @include body-16-bold;
         }
       }
     }

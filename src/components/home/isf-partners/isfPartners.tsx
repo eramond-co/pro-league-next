@@ -51,7 +51,7 @@ const IsfPartners: React.FC = () => {
           </div>
           <div className={style.item}>
             <div className={style.img}>
-              <Image src={worldCup} alt="partner" />
+              <Image src={championsleague} alt="partner" />
             </div>
             <div className={style.texts}>
               <p>

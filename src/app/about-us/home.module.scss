@@ -4,6 +4,8 @@
   @include flexCenter();
   padding: 0 120px 120px 120px;
 
+  margin-top: 56px;
+
   @include tablet {
     padding: 0 16px 120px 16px;
   }

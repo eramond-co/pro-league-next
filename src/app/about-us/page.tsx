@@ -4,10 +4,12 @@ import member1 from "@/assets/pics/members/ali yilmaz.png";
 import member2 from "@/assets/pics/members/lokman yilmaz.png";
 import member3 from "@/assets/pics/members/nico niemann.png";
 import { Footer } from "@/components/footer/footer";
+import { NavBar } from "@/components/navbar/navbar";
 
 const AboutUsPage: React.FC = () => {
   return (
     <>
+      <NavBar />
       <div className={classes.aboutUsWrapper}>
         <div className={classes.aboutUsPage}>
           <h1 className={classes.title}>About us</h1>

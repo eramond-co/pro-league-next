@@ -5,6 +5,13 @@
   @include flexCenter(column);
   justify-content: flex-start;
   gap: 120px;
+  position: relative;
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
   @include tablet {
     gap: 80px;
