@@ -12,7 +12,7 @@
   .container {
     margin-top: 46px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(121px, 1fr));
     gap: 32px;
 
     .item {
@@ -27,7 +27,7 @@
 
       .teamName {
         margin-top: 16px;
-        @include title-24-semibold;
+        @include body-20-regular;
         color: $gray-25;
         text-align: center;
       }

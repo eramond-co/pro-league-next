@@ -6,6 +6,8 @@ import FCBacishta from "@/assets/pics/Teams/FC Bacishta.png";
 import WolfsrudelFC from "@/assets/pics/Teams/Wolfsrudel FC.png";
 import TheLegends from "@/assets/pics/Teams/The Legends.png";
 import FCZukunft from "@/assets/pics/Teams/FC Zukunft.png";
+import FCRoyal from "@/assets/pics/Teams/fc royal.png";
+import NKZagreb from "@/assets/pics/Teams/nk zagreb.png";
 
 const RegisteredTeamsSection: React.FC = () => {
   return (
@@ -19,6 +21,14 @@ const RegisteredTeamsSection: React.FC = () => {
         <div className={classes.item}>
           <Image src={FKBosna} alt="FK Bosna" />
           <p className={classes.teamName}>FK Bosna</p>
+        </div>
+        <div className={classes.item}>
+          <Image src={FCRoyal} alt="FC Royal" />
+          <p className={classes.teamName}>FC Royal</p>
+        </div>
+        <div className={classes.item}>
+          <Image src={NKZagreb} alt="NK Zagreb" />
+          <p className={classes.teamName}>NK Zagreb</p>
         </div>
         <div className={classes.item}>
           <Image src={FCBacishta} alt="FC Bacishta" />
