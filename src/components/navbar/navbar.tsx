@@ -35,9 +35,10 @@ export const NavBar: React.FC<PropsDataType> = ({ className }) => {
           </div> */}
         </Link>
         <div className={classes.linkList}>
-          {items.map((i) => {
+          {items.map((i, index) => {
             return (
               <Link
+                key={index}
                 className={pathName == i.url ? classes.active : ""}
                 href={i.url}
               >
