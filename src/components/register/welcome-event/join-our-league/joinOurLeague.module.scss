@@ -4,9 +4,6 @@
   @include flexCenter(column);
   justify-content: flex-start;
   @include maxWidth(792px);
-  @include tablet {
-    padding: 0 16px;
-  }
 
   .title {
     margin-bottom: 16px;

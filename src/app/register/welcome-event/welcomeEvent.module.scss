@@ -1,0 +1,67 @@
+@import "@/scss/index";
+
+.main {
+  @include flexCenter(column);
+  width: 100%;
+  margin-top: 40px;
+  padding-bottom: 120px;
+  gap: 40px;
+  .detail {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 120px;
+    gap: 100px;
+    @include tablet {
+      padding: 0 16px;
+    }
+    .btn {
+      align-self: self-start;
+    }
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .title {
+      @include title-32-semibold;
+      @include tablet {
+        @include title-24-semibold;
+      }
+    }
+    .superTitle {
+      @include heading-48-semibold;
+      @include tablet {
+        @include title-32-semibold;
+      }
+    }
+    .des {
+      @include body-16-regular;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      li {
+        // list-style-type: disc;
+        // list-style-position: inside;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        &::before {
+          content: "";
+          min-width: 3px;
+          min-height: 3px;
+          background-color: white;
+          border-radius: 100%;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

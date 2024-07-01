@@ -1,0 +1,83 @@
+@import "@/scss/index.scss";
+
+.form {
+  @include maxWidth(377px);
+  @include flexCenter(column);
+  gap: 16px;
+
+  button[type="submit"] {
+    margin-top: 12px;
+  }
+
+  .success,
+  .error {
+    @include body-16-regular;
+  }
+
+  .success {
+    color: $error;
+  }
+
+  .error {
+    color: $green;
+  }
+
+  .checkboxLayout {
+    width: 100%;
+    @include flexCenter(column);
+    align-items: flex-start;
+    gap: 4px;
+    margin-top: 16px;
+
+    .checkboxWrapper {
+      @include flexCenter();
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 8px;
+      position: relative;
+
+      .checkbox {
+        @include minWidth(18px);
+        height: 18px;
+        border-radius: 5px;
+        background-color: $gray-25;
+        transition: 0.3s;
+        position: relative;
+        @include flexCenter();
+        z-index: -1;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          z-index: 1;
+          background: url("./../../../../assets/pics/icons/tick.svg") round;
+
+        }
+      }
+
+      .text {
+        @include footnote-12-regular;
+        color: $gray-25;
+      }
+
+      input {
+        opacity: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+
+        &:checked {
+          & ~ .checkbox {
+            background-color: $primary-600;
+          }
+        }
+      }
+    }
+  }
+}

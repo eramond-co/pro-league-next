@@ -9,6 +9,7 @@ import { ButtonSeconddary } from "@/components/button-secondary/buttonSeconddary
 import { ButtonOutlined } from "@/components/button-outlined/buttonOutlined";
 import Socca from "./slides/socca/socca";
 import AliceCarousel from "react-alice-carousel";
+import Welcome from "./slides/welcome/welcom";
 
 export const Header: React.FC = () => {
   const sliderList = [
@@ -16,15 +17,15 @@ export const Header: React.FC = () => {
       Component: <Socca />,
     },
     {
-      Component: <Socca />,
+      Component: <Welcome />,
     },
   ];
 
   return (
     <header className={classes.headerWrapper}>
       {/* <NavBar className={classes.navbar} /> */}
-      <Socca />
-      {/* <AliceCarousel
+      {/* <Socca /> */}
+      <AliceCarousel
         // duration={250}
         // showSlideInfo={true}
         // preventEventOnTouchMove={preventEventOnTouchMove}
@@ -37,7 +38,7 @@ export const Header: React.FC = () => {
         autoPlayInterval={5000}
         items={sliderList.map(({ Component }) => Component)}
         infinite
-      /> */}
+      />
     </header>
   );
 };

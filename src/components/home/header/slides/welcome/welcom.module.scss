@@ -1,1 +1,166 @@
 @import "@/scss/index";
+.main {
+  width: 100%;
+  @include flexCenter();
+  position: relative;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.heroImage {
+  width: 100%;
+  @include flexCenter();
+  position: relative;
+  z-index: 1;
+
+  @include tablet {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #0b001f 60%, #0b001f 0%);
+    opacity: 0.1;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.heroImageMobile {
+  width: 100%;
+  @include flexCenter();
+  position: relative;
+  z-index: 1;
+  display: none;
+
+  @include tablet {
+    display: flex;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #0b001f 60%, #0b001f 0%);
+    opacity: 0.1;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.header {
+  padding: 0 120px 72px;
+  @include maxWidth(1440px);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  @include flexCenter();
+  align-items: start;
+  justify-content: flex-start;
+  padding-top: pixelToVw(213);
+  z-index: 2;
+
+  @include tablet {
+    padding: 122px 16px 0;
+    align-items: flex-start;
+    // justify-content: center;
+  }
+
+  .textWrapper {
+    @include maxWidth(pixelToVw(785));
+    @include flexCenter(column);
+    align-items: flex-start;
+    gap: 24px;
+
+    @include tablet {
+      max-width: none;
+      width: 100%;
+      align-items: center;
+    }
+
+    @media screen and (min-width: 1920px) {
+      max-width: 785px;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      > span {
+        @include title-32-semibold;
+        font-family: jost;
+        @include tablet {
+          @include title-24-semibold;
+          text-align: center;
+        }
+        // @include flexCenter;
+        > span {
+          @include heading-48-semibold;
+          font-family: jost;
+        }
+      }
+      > h3 {
+        display: flex;
+        @include tablet {
+          flex-direction: column;
+        }
+        span {
+          @include heading-64-bold;
+          font-family: jost;
+          @include tablet {
+            @include heading-48-semibold;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .buttonWrapper {
+      width: 100%;
+      @include flexCenter();
+      justify-content: flex-start;
+      gap: 16px;
+      @include tablet {
+        justify-content: center;
+      }
+
+      .button {
+        font-size: pixelToVw(16);
+        line-height: pixelToVw(23);
+        height: pixelToVw(40);
+        border-radius: pixelToVw(8);
+
+        @include tablet {
+          border-radius: 8px;
+          @include body-16-medium;
+          height: 40px;
+        }
+
+        @media screen and (min-width: 1920px) {
+          border-radius: 8px;
+          @include body-16-medium;
+          height: 40px;
+        }
+      }
+    }
+  }
+}

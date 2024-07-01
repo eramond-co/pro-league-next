@@ -11,7 +11,6 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import addRequestProleague from "@/api/add-request-proleague/addRequestProleague";
 import { useState } from "react";
-import addRequestSoccaWelcom from "@/api/add-request-socca-welcome/addRequestSoccaWelcom";
 
 interface SelectBoxDataType {
   id: string;
@@ -22,7 +21,7 @@ interface FormDataType {
   full_name: string;
   email: string;
   phone_number: string;
-  // choose_league: string;
+  choose_league: string;
   checkbox: boolean;
 }
 
@@ -31,11 +30,26 @@ export const FormJoinLeague: React.FC = () => {
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [successStatus, setSuccessStatus] = useState<boolean>(false);
 
+  const listSelectOption: SelectBoxDataType[] = [
+    {
+      id: "1",
+      title: "Pro League",
+    },
+    {
+      id: "2",
+      title: "Fans of Socca League",
+    },
+    {
+      id: "3",
+      title: "Senior League",
+    },
+  ];
+
   const initialValues = {
     full_name: "",
     email: "",
     phone_number: "",
-    // choose_league: "",
+    choose_league: "",
     checkbox: false,
   };
 
@@ -54,14 +68,15 @@ export const FormJoinLeague: React.FC = () => {
           .string()
           .required("Gib deine Telefonnummer ein.")
           .min(11, "Ungültige Telefonnummer."),
-        // choose_league: yup.string().required("Wählen Sie eine Liga."),
+        choose_league: yup.string().required("Wählen Sie eine Liga."),
         // checkbox: yup.boolean().required("erforderlich."),
       }),
       onSubmit: (values) => {
         setloading(true);
 
-        addRequestSoccaWelcom({
+        addRequestProleague({
           email: values.email,
+          league: values.choose_league,
           mobile: values.phone_number,
           name: values.full_name,
           acceptme: values.checkbox === true ? 1 : 0,
@@ -70,7 +85,6 @@ export const FormJoinLeague: React.FC = () => {
             setloading(false);
             setSuccessMessage("erfolgreich!");
           } else {
-            setloading(false);
             setSuccessMessage("erfolglos!");
           }
         });
@@ -113,7 +127,7 @@ export const FormJoinLeague: React.FC = () => {
         }}
         messageError={touched.phone_number ? errors.phone_number : undefined}
       />
-      {/* <SelectUikit
+      <SelectUikit
         placeHolder="Wählen Sie Liga"
         list={listSelectOption}
         onChange={(v) => {
@@ -122,7 +136,7 @@ export const FormJoinLeague: React.FC = () => {
           }
         }}
         messageError={touched.choose_league ? errors.choose_league : undefined}
-      /> */}
+      />
 
       <div className={classes.checkboxLayout}>
         <div className={classes.checkboxWrapper}>
