@@ -11,7 +11,6 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import addRequestProleague from "@/api/add-request-proleague/addRequestProleague";
 import { useState } from "react";
-import addRequestSoccaWelcom from "@/api/add-request-socca-welcome/addRequestSoccaWelcom";
 
 interface SelectBoxDataType {
   id: string;
@@ -22,7 +21,7 @@ interface FormDataType {
   full_name: string;
   email: string;
   phone_number: string;
-  // choose_league: string;
+  choose_league: string;
   checkbox: boolean;
 }
 
@@ -31,69 +30,87 @@ export const FormJoinLeague: React.FC = () => {
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [successStatus, setSuccessStatus] = useState<boolean>(false);
 
+  const listSelectOption: SelectBoxDataType[] = [
+    {
+      id: "1",
+      title: "Pro League",
+    },
+    {
+      id: "2",
+      title: "Fans of Socca League",
+    },
+    {
+      id: "3",
+      title: "Senior League",
+    },
+  ];
+
   const initialValues = {
     full_name: "",
     email: "",
     phone_number: "",
-    // choose_league: "",
+    choose_league: "",
     checkbox: false,
   };
 
-  const { setFieldValue, handleSubmit, errors, touched } =
-    useFormik<FormDataType>({
-      initialValues,
-      validationSchema: yup.object({
-        full_name: yup
-          .string()
-          .required("Geben Sie Ihren vollständigen Namen ein."),
-        email: yup
-          .string()
-          .required("geben sie ihre E-Mail Adresse ein.")
-          .email("Ungültige E-Mail."),
-        phone_number: yup
-          .string()
-          .required("Gib deine Telefonnummer ein.")
-          .min(11, "Ungültige Telefonnummer."),
-        // choose_league: yup.string().required("Wählen Sie eine Liga."),
-        // checkbox: yup.boolean().required("erforderlich."),
-      }),
-      onSubmit: (values) => {
-        setloading(true);
+  const {
+    setFieldValue,
+    handleSubmit,
+    errors,
+    touched,
+    resetForm,
+    getFieldProps,
+  } = useFormik<FormDataType>({
+    initialValues,
+    validationSchema: yup.object({
+      full_name: yup
+        .string()
+        .required("Geben Sie Ihren vollständigen Namen ein."),
+      email: yup
+        .string()
+        .required("geben sie ihre E-Mail Adresse ein.")
+        .email("Ungültige E-Mail."),
+      phone_number: yup
+        .string()
+        .required("Gib deine Telefonnummer ein.")
+        .min(11, "Ungültige Telefonnummer."),
+      choose_league: yup.string().required("Wählen Sie eine Liga."),
+      // checkbox: yup.boolean().required("erforderlich."),
+    }),
+    onSubmit: (values) => {
+      setloading(true);
 
-        addRequestSoccaWelcom({
-          email: values.email,
-          mobile: values.phone_number,
-          name: values.full_name,
-          acceptme: values.checkbox === true ? 1 : 0,
-        }).then((res) => {
-          if (res.result) {
-            setloading(false);
-            setSuccessMessage("erfolgreich!");
-          } else {
-            setloading(false);
-            setSuccessMessage("erfolglos!");
-          }
-        });
-      },
-    });
+      addRequestProleague({
+        email: values.email,
+        league: values.choose_league,
+        mobile: values.phone_number,
+        name: values.full_name,
+        acceptme: values.checkbox === true ? 1 : 0,
+      }).then((res) => {
+        setloading(false);
+        if (res.result) {
+          setSuccessMessage("erfolgreich!");
+          resetForm();
+        } else {
+          setSuccessMessage("erfolglos!");
+        }
+      });
+    },
+  });
 
   return (
     <form className={classes.form} onSubmit={handleSubmit}>
       <InputDefaultUikit
         placeHolder="Vollständiger Name"
         inputProps={{
-          onChange: (e) => {
-            setFieldValue("full_name", e.target.value);
-          },
+          ...getFieldProps("full_name"),
         }}
         messageError={touched.full_name ? errors.full_name : undefined}
       />
       <InputDefaultUikit
         placeHolder="Email"
         inputProps={{
-          onChange: (e) => {
-            setFieldValue("email", e.target.value);
-          },
+          ...getFieldProps("email"),
         }}
         messageError={touched.email ? errors.email : undefined}
       />
@@ -107,13 +124,11 @@ export const FormJoinLeague: React.FC = () => {
       <InputDefaultUikit
         placeHolder="Telefonnummer"
         inputProps={{
-          onChange: (e) => {
-            setFieldValue("phone_number", e.target.value);
-          },
+          ...getFieldProps("phone_number"),
         }}
         messageError={touched.phone_number ? errors.phone_number : undefined}
       />
-      {/* <SelectUikit
+      <SelectUikit
         placeHolder="Wählen Sie Liga"
         list={listSelectOption}
         onChange={(v) => {
@@ -122,7 +137,7 @@ export const FormJoinLeague: React.FC = () => {
           }
         }}
         messageError={touched.choose_league ? errors.choose_league : undefined}
-      /> */}
+      />
 
       <div className={classes.checkboxLayout}>
         <div className={classes.checkboxWrapper}>

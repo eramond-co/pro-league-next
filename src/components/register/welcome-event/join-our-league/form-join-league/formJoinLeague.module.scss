@@ -15,11 +15,11 @@
   }
 
   .success {
-    color: $error;
+    color: $green;
   }
 
   .error {
-    color: $green;
+    color: $error;
   }
 
   .checkboxLayout {
@@ -52,8 +52,7 @@
           width: 16px;
           height: 16px;
           z-index: 1;
-          background: url("./../../../../assets/pics/icons/tick.svg") round;
-
+          background: url("../../../../../assets/pics/icons/tick.svg") round;
         }
       }
 

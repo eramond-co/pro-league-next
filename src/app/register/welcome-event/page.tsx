@@ -2,17 +2,16 @@
 
 import { NavBar } from "@/components/navbar/navbar";
 import style from "./welcomeEvent.module.scss";
-import { JoinOurLeague } from "@/components/home/join-our-league/joinOurLeague";
 import { CalendarIcon, CoinIcon, LocationIcon } from "@/svgs/sepehrSvgs";
 import { Footer } from "@/components/footer/footer";
 import { ButtonSeconddary } from "@/components/button-secondary/buttonSeconddary";
+import { JoinOurLeague } from "@/components/register/welcome-event/join-our-league/joinOurLeague";
 
 const WelcomeEvent: React.FC = () => {
   return (
     <>
       <NavBar />
       <div className={style.main}>
-        <JoinOurLeague />
         <div className={style.detail}>
           <div className={style.section}>
             <div className={style.title}>
@@ -87,11 +86,12 @@ const WelcomeEvent: React.FC = () => {
             </div>
           </div>
           {/* <div className={style.section}> */}
-          <ButtonSeconddary isLink link="#register" className={style.btn}>
+          {/* <ButtonSeconddary isLink link="#register" className={style.btn}>
             Anmelden
-          </ButtonSeconddary>
+          </ButtonSeconddary> */}
           {/* </div> */}
         </div>
+        <JoinOurLeague />
       </div>
       <Footer />
     </>

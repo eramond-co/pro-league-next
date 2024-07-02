@@ -63,7 +63,7 @@ export const SliderCoach: React.FC = () => {
           // ref={this.carouselRef}
           // isRTL={true}
           autoPlay
-          autoPlayInterval={5000}
+          autoPlayInterval={4000}
           items={coachItems.map((coach) => (
             <CoachItem {...coach} key={coach.id} />
           ))}

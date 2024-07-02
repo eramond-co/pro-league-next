@@ -14,10 +14,10 @@ import Welcome from "./slides/welcome/welcom";
 export const Header: React.FC = () => {
   const sliderList = [
     {
-      Component: <Socca />,
+      Component: <Welcome />,
     },
     {
-      Component: <Welcome />,
+      Component: <Socca />,
     },
   ];
 
