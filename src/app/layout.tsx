@@ -15,14 +15,14 @@ export const metadata: Metadata = {
       "Der Puls des modernen Fußballs! Erleben Sie die Spannung unserer neu gegründeten Fußballliga, wo Leidenschaft auf Professionalität trifft.",
     images: [
       {
-        url: "/opengraph-image.jpg",
+        url: "https://test2.soccaaustria.at/opengraph-image.jpg",
         alt: "opengraph",
         width: 400,
         height: 400,
         type: "image/jpeg",
       },
       {
-        url: "/twitter-image.jpg",
+        url: "https://test2.soccaaustria.at/twitter-image.jpg",
         alt: "opengraph",
         width: 400,
         height: 400,
