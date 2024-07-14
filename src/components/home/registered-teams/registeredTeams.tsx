@@ -8,6 +8,7 @@ import TheLegends from "@/assets/pics/Teams/The Legends.png";
 import FCZukunft from "@/assets/pics/Teams/FC Zukunft.png";
 import FCRoyal from "@/assets/pics/Teams/fc royal.png";
 import NKZagreb from "@/assets/pics/Teams/nk zagreb.png";
+import MaarifAustria from "@/assets/pics/Teams/Maarif Austria.png";
 
 const RegisteredTeamsSection: React.FC = () => {
   return (
@@ -45,6 +46,10 @@ const RegisteredTeamsSection: React.FC = () => {
         <div className={classes.item}>
           <Image src={FCZukunft} alt="FC Zukunft" />
           <p className={classes.teamName}>FC Zukunft</p>
+        </div>
+        <div className={classes.item}>
+          <Image src={MaarifAustria} alt="Maarif Austria" />
+          <p className={classes.teamName}>Maarif Austria</p>
         </div>
       </div>
     </div>
