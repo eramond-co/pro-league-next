@@ -23,7 +23,7 @@ export const HomeComponent: React.FC = () => {
   return (
     <div className={classes.home}>
       <NavBar className={classes.navbar} />
-      <Popup />
+      {/* <Popup /> */}
       <ScrollTop />
       <Header />
       <main className={classes.mainWrapper}>
